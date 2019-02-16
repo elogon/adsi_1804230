@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+Hola, Analisis y Desarrollo de Ssitemas de Informacion
+- 1804230 - Centro de Procesos Industriales y construccion
+SENA Regional Caldas
+
+]]></content>
+	
+	<tabTrigger>Hola adsi1804230</tabTrigger>
+	
+	<scope>source.html</scope>
+</snippet>
