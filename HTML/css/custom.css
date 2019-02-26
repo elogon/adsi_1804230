@@ -1,0 +1,16 @@
+h1 {
+background-color: crimson;
+border-radius: 175px;
+color: white;
+height: 250px;
+font-family: Arial;
+line-height: 8em;
+margin: 120px auto;
+text-align: center;
+transition: all 0.5s ease-in;
+width: 250px;
+}
+h1:hover {  
+	cursor: pointer;
+	transform: scale(1.6);
+}
