@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- cuadrado -->
+	<h1>cuadrado</h1>
+	<canvas	id="cuadrado"></canvas>	
+<script>	
+	 var	canvas			=	document.getElementById('cuadrado');	
+	 var	ctx						=	canvas.getContext('2d');	
+	 ctx.fillStyle='#f00';	
+	 ctx.fillRect(0,0,100,100);	
+	</script>	
+
+	 <!-- rectangulo -->
+	<h1>rectangulo</h1>
+	<canvas	id="rectangulo"></canvas>	
+<script>	
+	 var	canvas			=	document.getElementById('rectangulo');	
+	 var	ctx						=	canvas.getContext('2d');	
+	 ctx.fillStyle='#f00';	
+	 ctx.fillRect(0,0,200,100);	
+	</script>
+
+	 <!-- triangulo -->
+	<h1>triangulo</h1>
+	<canvas	id="triangulo"></canvas>	
+<script>	
+	 var	canvas			=	document.getElementById('triangulo');	
+	 var	ctx						=	canvas.getContext('2d');	
+	 ctx.fillStyle='#f00';	
+	 ctx.beginPath();	
+	 ctx.moveTo(10, 110);
+	 ctx.lineTo(110, 10);
+	 ctx.lineTo(210, 110);
+	 ctx.fill();
+	</script>
+
+	 <!-- circulo -->
+	<h1>circulo</h1>
+	<canvas	id="circulo"></canvas>	
+    <script>	
+    	var canvas=document.getElementById('circulo');	
+	    var ctx=canvas.getContext('2d');	
+	    ctx.fillStyle='#f00';	
+	    ctx.beginPath();
+	    ctx.arc(60, 60, 60, 0 Math.PI*2, true);
+	    ctx.closePath();
+	    ctx.fill();
+	</script>
+
+	 <!-- corazon -->
+	<h1>corazon</h1>
+	<canvas	id="corazon"></canvas>	
+     <script>	
+	 var canvas=	document.getElementById('corazon');	
+	 var ctx=	canvas.getContext('2d');
+	 ctx.fillStyle ='#f00';	
+	 ctx.beginPath();
+    ctx.moveTo(75,40);
+    ctx.bezierCurveTo(75,37,70,25,50,25);
+    ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+    ctx.bezierCurveTo(20,80,40,102,75,120);
+    ctx.bezierCurveTo(110,102,130,80,130,62.5);
+    ctx.bezierCurveTo(130,62.5,130,25,100,25);
+    ctx.bezierCurveTo(85,25,75,37,75,40);
+    ctx.fill();
+</script>
+
+<!-- Texto -->
+<h1>Texto</h1>
+<canvas id=texto></canvas>
+<script>
+var canvas = document.getElementById('texto');
+ctx.fillStyle = '#f00';
+ctx.font = "60px Tahoma"
+ctx.fillText("ADSI", 20, 80);
+ctx.stroke();
+</script>
+</body>
+</html>
+ 
