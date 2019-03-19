@@ -1,0 +1,15 @@
+doctype
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Ciclo Para
+	body
+		h1 Ciclo Para
+		ul
+			-for(var i = 1; i <=20; i++)
+				li Elemento #{i}
+		table(border="1")
+			-for(var tr = 1; tr <= 5; tr++)
+				tr
+					-for(var td = 1; td <=10; td++)
+						td F#{tr} C#{td}
