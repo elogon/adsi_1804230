@@ -1,7 +1,12 @@
 doctype
 html(lang="en")
-head
-	meta(charset="UTF-8")
-	title Reto PUG
-body
+	head
+		meta(charset="UTF-8")
+		title Reto PUG
+	body
+		h1 Reto PUG
+			table(width='500px', height='450px')
+				each val, index in[ 'rgba(6,6,239,0.1)', 'rgba(6,6,239,0.2)', 'rgba(6,6,239,0.3)', 'rgba(6,6,239,0.4)', 'rgba(6,6,239,0.5)', 'rgba(6,6,239,0.6)', 'rgba(6,6,239,0.7)', 'rgba(6,6,239,0.8)', 'rgba(6,6,239,0.9)', 'rga(6,6,239)']
+					tr()
+						td(style='background-color:'+val)
 	
