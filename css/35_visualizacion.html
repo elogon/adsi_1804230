@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Visualización</title>
+	<style>
+		h3{
+			text-align: center;
+		}
+		section.cajapadre,
+		section.cajapadre2 {
+			border: 2px solid gray;
+			margin: 0px auto;
+			padding: 20px;
+			width: 400px;
+		}
+		section.cajapadre div.caja{
+			border: 2px solid silver;
+			height: 100px;
+			width: 100px;
+			display: inline-block;
+			margin: 10px;
+			font-size: 4em;
+			text-align: center;
+			line-height: 100px;
+		}
+		section.cajapadre div.caja5{
+			display: none;
+		}
+		section.cajapadre div.cajav{
+			visibility: hidden;
+		}
+		section.cajapadre2 div,
+		section.cajapadre2 a {
+			border: 2px solid silver;
+			padding: 10px;
+			margin: 10px;
+		}
+		section.cajapadre2 div.linea{
+			display: inline;
+		}
+		section.cajapadre2 a.bloque{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<h1>Visualización</h1>
+	<h3>5 = Display: none</h3>
+	<section class="cajapadre">
+		<div class="caja">1</div>
+		<div class="caja">2</div>
+		<div class="caja">3</div>
+		<div class="caja">4</div>
+		<div class="caja caja5">5</div>
+		<div class="caja">6</div>
+		<div class="caja">7</div>
+		<div class="caja">8</div>
+		<div class="caja">9</div>
+	</section>
+
+	<h3>5 = Visibility: hidden</h3>
+	<section class="cajapadre">
+		<div class="caja">1</div>
+		<div class="caja">2</div>
+		<div class="caja">3</div>
+		<div class="caja">4</div>
+		<div class="caja cajav">5</div>
+		<div class="caja">6</div>
+		<div class="caja">7</div>
+		<div class="caja">8</div>
+		<div class="caja">9</div>
+	</section>
+	<br>
+	<section class="cajapadre2">
+		<div>DIV Normal</div>
+		<div class="linea">Div con Display: inline</div>
+		<a href="">Enlace Normal</a>
+		<a href="" class="bloque">Enlace con Display: block</a>
+	</section>
+	
+</body>
+</html>

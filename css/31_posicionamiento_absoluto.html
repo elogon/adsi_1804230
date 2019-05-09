@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Posicionamiento absoluto</title>
+	<style>
+		section.cajapadre {
+			border:2px solid gray;
+			margin:0px auto;
+			width:400px;
+		}
+		h4 {
+			text-align: center;
+		}
+		section.cajapadre div {
+			border:2px solid silver;
+			margin:5px;
+			padding:20px;
+		}
+		section.cajapadre div.cajapeque {
+			display: inline-block;
+			width: 76px;
+		}
+		div.cajamover {
+			background-color: white; 
+			position: absolute;
+			left: 700px;
+			top: 110px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Posicionamiento absoluto</h1>
+	<section class="cajapadre">
+		<div class="cajapeque">caja 1</div>
+		<div class="cajapeque">caja 2</div>
+		<div class="cajapeque">caja 3</div>
+		<div class="cajagrande">caja 4</div>
+	</section>
+	<h4>Posicionamiento absoluto de la caja 2</h4>
+	<section class="cajapadre">
+		<div class="cajapeque">caja 1</div>
+		<div class="cajapeque cajamover">caja 2</div>
+		<div class="cajapeque">caja 3</div>
+		<div class="cajagrande">caja 4</div>
+	</section>
+</body>
+</html>

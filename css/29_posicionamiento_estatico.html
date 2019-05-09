@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Posicionamiento Normal/Estatico</title>
+	<style>
+		section.cajapadre {
+			border:2px solid gray;
+			margin: 0px auto;
+			width: 500px;
+		}
+		h4 {
+			text-align: center;
+		}
+		section.cajapadre div.cajahija {
+			border: 2px solid silver;
+			margin: 5px;
+			padding: 20px;
+		}
+		section.cajapadre div.caja{
+			border:2px dashed silver;
+			margin:5px;
+			padding: 15px;
+		}
+		section.cajapadre div.caja a {
+			border:2px solid silver;
+			margin:5px;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Posicionamiento Normal/Estatico</h1>
+	<h4>Posicionamiento en Bloque</h4>
+	<section class="cajapadre">
+		<div class="cajahija">Elemento de Bloque</div>
+		<div class="cajahija">Elemento de Bloque</div>
+		<div class="cajahija">Elemento de Bloque</div>
+	</section>
+	<h4>Posicionamiento en  linea</h4>
+	<section class="cajapadre">
+		<div class="caja">
+			<a href="">Google</a>
+			<a href="">Yahoo</a>
+			<a href="">Youtube</a>
+		</div>
+	</section>
+</body>
+</html>

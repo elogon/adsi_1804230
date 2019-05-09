@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sprites CSS</title>
+	<style>
+		section#sprite {
+			background: url(imgs/sprite-animation.png);
+			height: 240px;
+			margin: 80px auto;
+			width: 180px;
+		}
+		section#sprite.s1 {background-position: 0px -20px;}
+		section#sprite.s2 {background-position: -180px -20px;}
+		section#sprite.s3 {background-position: -360px -20px;}
+		section#sprite.s4 {background-position: -540px -20px;}
+		section#sprite.s5 {background-position: -720px -20px;}
+		
+		section#sprite.s6 {background-position: -0px -260px;}
+		section#sprite.s7 {background-position: -180px -260px;}
+		section#sprite.s8 {background-position: -360px -260px;}
+		section#sprite.s9 {background-position: -540px -260px;}
+		section#sprite.s10 {background-position: -720px -260px;}
+	</style>
+</head>
+<body>
+	<h1>Sprites CSS</h1>
+	<section id="sprite" class="s1">
+
+	</section>
+
+
+
+
+
+	<script>
+		var sprite =document.getElementById("sprite");
+		var actf =1;
+		var numf =10;
+		setInterval(function() {
+			sprite.className = '';
+			sprite.classList.add('s'+actf);
+			if(actf == numf) {
+				actf =1;
+			}else {
+				actf++;
+			}
+
+		},100);
+	</script>
+
+
+
+</body>
+</html>

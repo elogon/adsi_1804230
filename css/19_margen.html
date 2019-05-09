@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Margen</title>
+	<style>
+		section.cajapadre {
+			border:2px dashed gray;
+			height: 300px;
+			/* Forma Larga */
+			margin-top: 0px;
+			margin-right: auto;
+			margin-bottom: 0px;
+			margin-left: auto;
+			/*Forma Corta*/
+			margin:0px auto;
+			width: 400px;
+		}
+		section.cajapadre div.cajahijo {
+			border: 2px dashed gray;
+			background-color: silver;
+			height: 80px;
+			width: 160px;
+			text-align: center;
+			/* Forma Larga */
+			margin-top: 20px;
+			margin-left: 180px;
+			/*Forma Corta*/
+			margin:20px 0px 0px 180px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Margen</h1>
+	<section class="cajapadre">
+		<div class="cajahijo">Caja</div>
+	</section>
+</body>
+</html>

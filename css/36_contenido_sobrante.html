@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Contenido Sobrante (overflow)</title>
+	<style>
+		section.caja{
+			border: 2px solid grey;
+			padding: 4px;
+			vertical-align: top;
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+		}
+		section.caja h4{
+			background-color: silver;
+			padding: 10px;
+			margin: 0px;
+		}
+		section.caja2{
+			overflow: hidden;
+		}
+		section.caja3{
+			overflow: scroll;
+		}
+	</style>
+</head>
+<body>
+	<h1>Contenido Sobrante (overflow)</h1>
+	<section class="caja caja1">
+		<h4>overflow:visible</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque praesentium, atque delectus, eos vitae inventore, vero eum eaque in dolores, qui voluptatum! Iure id adipisci ratione corrupti accusantium consequuntur perspiciatis error ut libero, doloribus nisi illum facere facilis repellendus quod maxime excepturi beatae, quibusdam at enim. Quasi, iure minus ea!
+		</p>
+	</section>
+
+	<section class="caja caja2">
+		<h4>overflow:hidden</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque praesentium, atque delectus, eos vitae inventore, vero eum eaque in dolores, qui voluptatum! Iure id adipisci ratione corrupti accusantium consequuntur perspiciatis error ut libero, doloribus nisi illum facere facilis repellendus quod maxime excepturi beatae, quibusdam at enim. Quasi, iure minus ea!
+		</p>
+	</section>
+
+	<section class="caja caja3">
+		<h4>overflow:scroll</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque praesentium, atque delectus, eos vitae inventore, vero eum eaque in dolores, qui voluptatum! Iure id adipisci ratione corrupti accusantium consequuntur perspiciatis error ut libero, doloribus nisi illum facere facilis repellendus quod maxime excepturi beatae, quibusdam at enim. Quasi, iure minus ea!
+		</p>
+	</section>
+</body>
+</html>

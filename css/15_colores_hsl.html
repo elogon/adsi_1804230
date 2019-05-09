@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Colores (HSL)</title>
+	<style>
+		section {
+
+			margin: 20px auto;
+			width: 620px;
+
+		}
+		section div {
+			float: left;
+			height: 120px;
+			width: 120px;
+			text-align: center;
+			font-weight: bold;
+			line-height: 7em;
+		}
+
+		.section3{ 
+			width: 500px; 
+		}
+
+		.section4{ 
+			width: 400px; 
+		}
+
+		section div:first-child,
+		section div:last-child {
+			color: white;
+		}
+
+		.maroon { background-color: hsl(0,100%,25%); }
+		.red { background-color: hsl(0,100%,50%); }
+		.orange { background-color: hsl(39,100%,50%); }
+		.yellow { background-color: hsl(60,100%,50%); }
+		.olive { background-color: hsl(60,100%,25%); }
+
+		.purple { background-color: hsl(300,100%,25%);  }
+		.fuchsia { background-color: hsl(300,100%,50%); }
+		.white { background-color: hsl(0,0%,100%); }
+		.lime { background-color: hsl(120,100%,50%); }
+		.green { background-color: hsl(120,100%,25%);  }
+
+		.navy { background-color: hsl(240,100%,25%); }
+		.blue { background-color: hsl(240,100%,50%); }
+		.aqua { background-color: hsl(180,100%,50%); }
+		.teal { background-color: hsl(180,100%,25%); }
+
+		.black { background-color: hsl(0,0%,0%); }
+		.silver { background-color: hsl(0,0%,75%); }
+		.gray { background-color: hsl(0,0%,50%); }
+
+	</style>
+</head>
+<body>
+	Colores (HSL)
+
+	<section>
+		<div class="maroon">hsl(0,100%,25%)</div>
+		<div class="red">hsl(0,100%,50%)</div>
+		<div class="orange">hsl(39,100%,50%)</div>
+		<div class="yellow">hsl(60,100%,50%)</div>
+		<div class="olive">hsl(60,100%,25%)</div>
+	</section>
+
+	<section>
+		<div class="purple">hsl(300,100%,25%)</div>
+		<div class="fuchsia">hsl(300,100%,50%)</div>
+		<div class="white">hsl(0,0%,100%)</div>
+		<div class="lime">rgb(0,255,0)</div>
+		<div class="green">rgb(0,128,0)</div>
+	</section>
+
+	<section class="section3">
+		<div class="navy">rgb(0,0,128)</div>
+		<div class="blue">rgb(0,0,255)</div>
+		<div class="aqua">rgb(0,255,255)</div>
+		<div class="teal">rgb(0,128,128)</div>
+	</section>
+
+	<section class="section4">
+		<div class="black">rgb(0,0,0)</div>
+		<div class="silver">rgb(192,192,192)</div>
+		<div class="gray">rgb(128,128,128)</div>
+	</section>
+</body>
+</html>
