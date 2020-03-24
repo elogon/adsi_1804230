@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto (Eventos Tiempo)</title>
+	<style>
+		/* section.start */
+		section.start {
+			background-color: rgba(0,0,0,.8);
+			height: 100%;
+			position: fixed;
+			top: 0px; left: 0px;
+			width: 100%;
+			z-index: 999;
+
+		}
+		section.start input{
+			border: none;
+			border-radius: 20px;
+			display: block;
+			font-size: 1em;
+			margin: 0px auto;
+			position: relative;
+			padding: 10px;
+			top: 50%;
+			text-transform: uppercase;
+			text-align: center;
+			transform: translateY(-50%);
+			width: 260px;
+		}
+		section.start button{
+			background-color: #66ffff;
+			border: none;
+			border-radius: 20px;
+			display: block;
+			font-size: 1em;
+			top: 52%;
+			margin: 0px auto;
+			padding: 10px;
+			position: relative;
+			text-transform: uppercase;
+			transform: translateY(-50%);
+			width: 280px;
+		}
+		section.start button:hover {
+			cursor: pointer;
+		}
+		main.game {
+			margin: 20px auto;
+			width: 825px;
+		}
+		main.game header {
+			background: url(Img/hungry/header.png) no-repeat center;
+			height: 108px;
+			width: 846px;
+		}
+		main.game aside {
+			height: 610px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		main.game aside.left {
+			width: 220px;
+		}
+		/ aside.left /
+		aside.left section {
+			margin-top: 24px;
+		}
+		aside.left section.info {
+			background: url(Img/hungry/options.png) no-repeat center;
+			height: 201px;
+			position: relative;
+			width: 201px;
+		}
+		aside.left section.info div {
+			position: absolute;
+			font: 1.8em Arial;
+			color: #888;
+			right: 36px;
+		}
+		aside.left section.info div#time  { top: 34px;   }
+		aside.left section.info div#score { top: 134px;  }
+
+		aside.left section.bestscores {
+			background: url(Img/hungry/score.png) no-repeat center;
+			height: 328px;
+			position: relative;
+			width: 219px;
+		}
+		aside.left section.bestscores ul.list {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			position: absolute;
+			top: 64px; left: 30px;
+			width: 170px;
+		}
+		aside.left section.bestscores ul.list li {
+			color: #9bc6b6;
+			font: 1em Arial;
+			margin: 32px 0px 28px 13px;
+			text-transform: uppercase;
+		}
+		/ aside.right /
+		main.game aside.right {
+			margin-left: -5px;
+			width: 600px;
+		}
+		main.game aside.right section.table {
+			background: url(Img/hungry/table.png)no-repeat center;
+			height: 600px;
+			position: relative;
+			margin-top: 24px;
+			width: 600px;
+		}
+		section.table div#pig {
+			background: transparent url(Img/hungry/pig.png) no-repeat center;
+			height: 100px;
+			position: absolute;
+			top: 0px; left: 0px;
+			transition: all 0.1s;
+			width: 100px;
+		}
+		section.table div.food {
+		    background: transparent no-repeat center;
+		    height: 100px;
+		    position: absolute;
+		    top: 0px; left: 0px;
+		    transition: all 0.15s;
+		    width: 100px;
+		    /*-------*/
+		    animation: 1s animFood infinite;
+		}
+		section.table div.food.apple {
+			background-image: url(Img/hungry/apple.png);
+		}
+		section.table div.food.banana {
+			background-image: url(Img/hungry/banana.png);
+		}
+		section.table div.food.burger {
+			background-image: url(Img/hungry/burger.png);
+		}
+		section.table div.food.chicken {
+			background-image: url(Img/hungry/chicken.png);
+		}
+		section.table div.food.fish {
+			background-image: url(Img/hungry/fish.png);
+		}
+		section.table div.food.icecream {
+			background-image: url(Img/hungry/icecream.png);
+		}
+		section.table div.food.soup {
+			background-image: url(Img/hungry/soup.png);
+		}
+		@keyframes animFood {
+			0%, 100% {transform: rotate(0deg) ;}
+			50%      {transform: rotate(180deg) ;}
+			
+		}
+	</style>
+</head>
+<body>
+	<section class="start">
+		<input type="text" id="player" placeholder="Nombre del jugador">
+		<button id="btnPlay"> Play</button>
+	</section>
+	<main class="game">
+		<header></header>
+		<aside class="left">
+			<section class="info">
+				<div id="time">60</div>
+				<div id="score">90</div>
+			</section>
+			<section class="bestscores">
+				<ul class="list">
+					<li>ofactor</li>
+					<li>saitama</li>
+					<li>kakaroto</li>
+					<li>jhonwick</li>
+					<li>andy</li>
+				</ul>
+			</section>
+		</aside>
+		<aside class="right">
+			<section class="table">
+				<div id="pig"></div>
+				<div class="food "></div>
+				<div class="food "></div>
+				<div class="food "></div>
+				
+
+			</section>
+		</aside>
+	</main>
+	<script>
+		var pig      = document.getElementById('pig');
+		var time     = document.getElementById('time');
+		var btnPlay  = document.getElementById('btnPlay');
+		var score    = document.getElementById('time')
+		var foods    = document.getElementsByClassName('food');
+		var element1 = document.getElementById('element1');
+		var element2 = document.getElementById('element2');
+		var ps       = [0, 100, 200, 300, 400, 500];
+		var food     = ['apple', 'banana', 'burger', 'chicken', 'fish', 'icecream', 'meat', 'soup'];
+		var psX      = 0;
+		var psY      = 0;
+		//initGame();
+
+		//eventos
+		btnPlay.onclick = function(){
+			var player = document.getElementById('player').value;
+			if(player.length > 0) {
+				this.parentElement.style.display = "none";
+				initGame()
+			}else{
+				alert('Debe ingresar el nombre del jugador');
+			}
+		}
+
+		// Funciones
+		function initGame() {
+			randomPig();
+			gameTime();
+			movePig();
+			var irf = setInterval(randomFood, 1000);
+			
+			
+		}
+		function randomPig() {
+			psX = randomPosition();
+			psY = randomPosition();
+			pig.style.top  = psX+"px";
+			pig.style.left = psY+"px";
+		}
+		function randomPosition() {
+			var rnd = Math.round(Math.random()*ps.length);
+			return ps[rnd];
+		}
+		function gameTime(){
+			var ct = 60;
+			var igt = setInterval(function(){
+				if(ct == 0){
+					//end game
+					time.innerHTML = ct;
+					clearInterval(igt);
+				}else{
+					time.innerHTML = ct;
+				}
+				ct--;
+			 
+			 },1000);
+		}
+		function movePig(){
+			document.onkeydown = function(evt){
+				
+				switch(evt.keyCode){
+					//left
+					case 37:
+					//console.log("left")
+					if(psX > 0){
+						psX -= 100;
+						pig.style.left = psX+"px";
+					} 
+					break;
+					//up
+					case 38:
+					//console.log("up")
+					if(psY > 0){
+						psY -= 100;
+						pig.style.top = psY+"px";
+					}
+					break;
+					//right
+					case 39:
+					//console.log("right")
+					if(psX < 500){
+						psX += 100;
+						pig.style.left = psX+"px";
+					}
+					break;
+					//down
+					case 40:
+					//console.log("down")
+					if(psY < 500){
+						psY += 100;
+						pig.style.top = psY+"px";
+					}
+					break;
+				}
+
+			}
+		}
+		function randomFood(){
+			for(var i=0; i<3; i++) {
+				var rfood = Math.floor(Math.random()*food.length);
+				foods[i].className = 'food';
+				foods[i].classList.add(food[rfood]);
+				foods[i].style.top = randomPosition()+"px";
+				foods[i].style.left = randomPosition()+"px";
+				checkEat(pig.foods[i]);
+			}
+		}
+		function endGme(){
+			window.location.replace('30_reto_eventos_tiempo.html');
+		}
+		function checkEat(element1, element2){
+			element1top    = element1.offsetTop;
+			element1left   = element1.offsetLeft;
+			element1right  = Number(element1.offsetLeft)+ Number(element1.offsetWidth);
+			element1bottom = Number(element1.offsetTop)+ Number(element1.offsetHeight);
+
+			element2top    = element2.offsetTop;
+			element2left   = element2.offsetLeft;
+			element2right  = Number(element2.offsetLeft)+ Number(element2.offsetWidth);
+			element2bottom = Number(element2.offsetTop)+ Number(element2.offsetHeight);
+
+			if(element1right > element2left && 
+				element1left < element2right &&
+				element1top  < element2bottom &&
+				element1bottom > element2top){
+					result.innerHTML = "Colisión: SI!";
+        } else {
+            result.innerHTML = "Colisión: NO!";
+   
+			}
+
+
+		}
+		bdy.onkeyup = function(e) {
+    		var kcod = e.keyCode;
+    		if (kcod == 37) {
+          		posl -= 40;
+          		element1.style.left = posl+'px';
+    		}
+    		if (kcod == 38) {
+        		post -= 40;
+        	element1.style.top = post+'px';
+    		}
+    		if (kcod == 39) {
+        		posl += 40;
+        		element1.style.left = posl+'px';
+    		}
+    		if (kcod == 40) {
+        		post += 40;
+        		element1.style.top = post+'px';
+    		}
+    		if (kcod > 36 && kcod < 41) {
+        		collidesWith(element1, element2);
+    		}
+		}
+
+		
+	</script>
+</body>
+</html>

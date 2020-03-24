@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Encadenamiento (jQuery)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		section.ball {
+			background-color: #6b3789;
+			border-radius: 80px;
+			box-shadow: 2px 0px 24px #000 inset;
+			height: 160px;
+			position: relative;
+			width: 160px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Encadenamiento (jQuery)</h1>
+		<section class="ball"></section>
+	</main>
+
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.ball').hide().fadeIn(2000).slideUp(1000).slideDown(500).animate({left: '400px'}, 2000).animate({left: '0px'}, 500);
+		});
+	</script>
+</body>
+</html>

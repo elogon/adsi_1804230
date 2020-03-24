@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicionales (Switch)</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<main>
+		<h1>Condicionales (Switch)</h1>
+		<div id="day"></div>
+		<style>
+			div#day {
+				background: url(Img/semana.png) no-repeat;
+				margin: 10px auto;
+				height: 140px;
+				width: 388px;
+			}
+			div#day.lunes {
+				background-position: 0px 0px;
+			}
+			div#day.martes {
+				background-position: 0px -150px;
+			}
+			div#day.miercoles {
+				background-position: 0px -292px;
+			}
+			div#day.jueves {
+				background-position: 0px -440px;
+			}
+			div#day.martes {
+				background-position: -390px 0px;
+			}
+		</style>
+	</main>
+
+	<script>
+		var day = document.getElementById('day');
+		var date  = new Date();
+		switch(date.getDay()) {
+			case 1: {
+				//console.log("Hoy es Lunes")
+				day.classList.add('lunes');
+				break;
+			}
+			case 2: {
+				//console.log("Hoy es Martes")
+				day.classList.add('martes');
+
+				break;
+			}
+			case 3: {
+				//console.log("Hoy es Miércoles")
+				day.classList.add('miércoles');
+				break;
+			}
+			case 4: {
+				//console.log("Hoy es Jueves")
+				day.classList.add('jueves');
+				break;
+			}
+			case 5: {
+				//console.log("Hoy es Viernes")
+				day.classList.add('viernes');
+				break;
+			}
+		}
+	</script>
+	
+</body>
+</html>

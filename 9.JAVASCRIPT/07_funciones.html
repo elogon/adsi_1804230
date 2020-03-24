@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Funciones</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<main>
+		<h1>Funciones</h1>
+		<h3>Funcion sin parametros (argumentos)</h3>
+		<output id="welcome"></output>
+		<h3>Funcion con parametros (argumentos)</h3>
+		<input type="number" id="n1" placeholder="numero 1">
+		+
+		<input type="number" id="n2" placeholder="numero 2">
+		=
+		<output id="answer"></output>
+		<h3>Funcion retornar</h3>
+		<output id="today"></output>
+	</main>
+	
+	<script>
+		var welcome = document.getElementById('welcome');
+		var date    = new Date();
+		var answer  = document.getElementById('answer');
+		var today   = document.getElementById('today');
+
+		//funciones sin parametros
+		function sayHello(){
+			welcome.innerHTML = 'Bienvenido Visitante: ' 
+								+date.getHours()+':'+date.getMinutes();
+		}
+		sayHello();
+
+		//funciones con parametros
+		function sum (n1, n2){
+			if(n1 != '' && n2 != ''){
+				answer.innerHTML = parseInt(n1) + parseInt(n2);
+			}
+			
+		}
+		n1.oninput = function(){
+			var n1 = document.getElementById('n1').value;
+			var n2 = document.getElementById('n2').value;
+			sum(n1, n2);
+		}
+		n2.oninput = function(){
+			var n1 = document.getElementById('n1').value;
+			var n2 = document.getElementById('n2').value;
+			sum(n1, n2);
+		}
+
+		// funcion retornar
+		function getToday(){
+			return date;
+		}
+		today.innerHTML = getToday();
+	</script>
+</body>
+</html>

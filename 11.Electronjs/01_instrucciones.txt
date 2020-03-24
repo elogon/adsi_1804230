@@ -1,0 +1,24 @@
+# Clona el repositorio
+git clone https://github.com/electron/electron-quick-start
+# ve al repositorio
+cd electron-quick-start
+# instala las dependencias
+npm install
+# ejecuta la aplicación
+npm start
+
+
+sudo npm install --save-dev electron
+sudo npm install -g electron
+
+// ----- para omitir errores de permisos -----
+sudo npm install --save-dev electron --unsafe-perm=true --allow-root
+sudo npm install -g electron --unsafe-perm=true --allow-root
+// -----
+
+npm install electron-packager --save-dev
+npm install electron-packager -g
+
+electron-packager ./ hello 
+electron-packager ./ hello --platform=darwin
+electron-packager ./ hello --platform=win32

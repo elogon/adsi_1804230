@@ -1,0 +1,60 @@
+body {
+  font: 16px Arial;
+}
+
+main {
+  margin: 20px auto;
+  width: 960px;
+}
+main h1 {
+  text-align: center;
+}
+main section.slider {
+  height: 640px;
+  overflow: hidden;
+  position: relative;
+}
+main section.slider div.sliders {
+  position: absolute;
+}
+main section.slider div.sliders img {
+  position: absolute;
+  transition: left 1s;
+}
+main section.slider div.sliders img#slider1 {
+  left: 0px;
+}
+main section.slider div.sliders img#slider2 {
+  left: 960px;
+}
+main section.slider div.sliders img#slider3 {
+  left: 1920px;
+}
+main section.slider div.sliders img#slider4 {
+  left: 2880px;
+}
+main section.slider div.sliders img#slider5 {
+  left: 3840px;
+}
+main section.slider div.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+}
+main section.slider div.controls a {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  display: inline-block;
+  height: 20px;
+  text-decoration: none;
+  text-indent: -9999px;
+  transition: all 0.2s;
+  transform: scale(0.8);
+  width: 20px;
+}
+main section.slider div.controls a:hover {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.1);
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Comentarios JS</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<main>
+		<h1>Comentarios JS</h1>
+		<h3 id="fecha"></h3>
+
+	</main>
+	<script>
+		//Esto es un comentario de una sola linea
+		var fecha = document.getElementById('fecha');
+		/*
+		Este es un comentario
+		de multiples lineas
+		*/
+		var hoy = new Date(); //Declaro una variable de tipo fecha
+		fecha.innerHTML = hoy; //Imprime la fecha
+
+	</script>
+</body>
+</html>

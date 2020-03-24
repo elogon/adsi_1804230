@@ -1,0 +1,98 @@
+body {
+	background-color: #003145;
+	font: 16px Arial;
+
+	h1 {
+		font-size: 3.6em;
+		background: linear-gradient(to top, #003145 20%, #54f400);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin: 40px auto;
+		text-align: center;
+		width: 580px;
+
+	}
+	a:link.btn,
+	a:visited.btn {
+		border: 1px solid #54f400;
+		border-radius: 4px;
+		color: #54f400;
+		display: block;
+		padding: 12px;
+		text-align: center;
+		text-decoration: none;
+		text-transform:uppercase;
+		transition: all 0.5s ease ;
+		width: 120px;
+		margin: 10px auto;
+		&:hover {
+			transform: translateY(-10px) scale(1.1);
+		}
+	}
+}
+section.modal {
+	background-color: rgba(0,0,0, .8);
+	position: fixed;
+	opacity: 0;
+	top: 0px;
+	pointer-events: none;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	transition: all 0.5s ease;
+	transform: scale(.8) ;
+	z-index: 9999;
+
+	&:target {
+		opacity: 1;
+		pointer-events: auto;
+		transform: scale(1) ;
+
+	}
+	> div {
+		background-color: rgba(255, 255, 255, .8);
+		box-shadow: 0px 0px 12px rgba(0, 0, 0, .6);
+		border-radius: 4px;
+		//-------------------------------------
+		//condicionles
+		$age:19;
+		@if $age >= 18 {
+			h2 {
+				color: green;
+				position: relative;
+				&:after {
+					content: "Si Puede Votar";
+				}
+			}
+		} @else {
+			h2 {
+				color: #d71f33;
+				position: relative;
+				&:after {
+					content: "No Puede Votar";
+				}
+			}
+		}
+		//color rgba(0, 0, 0, .6);
+		//--------------------------------------
+		padding: 20px;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translateY(-45%);
+		transform: translateX(-50%);
+		width: 400px;
+
+		a:link,
+		a:visited {
+			font-size: 2em;
+			display: block;
+			text-decoration: none;
+			color: #dc143c;
+			position: absolute;
+			top: 0px ;
+			right: 10px;
+		}
+
+	}
+}s

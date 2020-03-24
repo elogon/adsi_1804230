@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alineacion Contenido Flex Box</title>
+	<style>
+		body {
+			font:16px Arial;
+			color:#666;
+		}
+		h3 {
+			border:2px solid #de908e;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		ul.fruits {
+			background-color:#de908e;
+			border-radius: 4px;
+			display: flex; /*Activar FlexBox*/
+			flex-wrap: wrap;
+			height: 768px;
+			list-style: none;
+			padding: 0px;
+			margin:20px 0px;
+
+		}
+		ul.fruits li {
+			background-color:#c9e1d3;
+			margin:4px;
+		}
+		/*Alineacion*/
+		ul.fruits.options1 {align-content: stretch;}
+		ul.fruits.options2 {align-content: flex-start;}
+		ul.fruits.options3 {align-content: flex-end;}
+		ul.fruits.options4 {align-content: center;}
+		ul.fruits.options5 {align-content: space-between;}
+		ul.fruits.options6 {align-content: space-around;}
+	</style>
+</head>
+<body>
+	<h1>Alineacion Contenido Flex Box</h1>
+	<h3>align-content: stretch</h3>
+	<ul class="fruits options1">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<!-- -->
+	<h3>align-content: flex-start</h3>
+	<ul class="fruits options2">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<!-- --> 
+	<h3>align-content: flex-end</h3>
+	<ul class="fruits options3">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<!-- -->
+	<h3>align-content: center</h3>
+	<ul class="fruits options4">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<!-- -->
+	<h3>align-content: space-between</h3>
+	<ul class="fruits options5">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<!-- -->
+	<h3>align-content: space-around</h3>
+	<ul class="fruits options6">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+</body>
+</html>

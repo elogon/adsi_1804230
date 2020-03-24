@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Justificar Flex Box</title>
+	<style>
+		body {
+			font:16px Arial;
+			color:#666;
+		}
+		h3 {
+			border:2px solid #de908e;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		ul.fruits {
+			background-color:#de908e;
+			border-radius: 4px;
+			display: flex; /*Activar FlexBox*/
+			height: 768px;
+			list-style: none;
+			padding: 0px;
+			margin:20px 0px;
+		}
+		ul.fruits li {
+			background-color:#c9e1d3;
+			margin:4px;
+		}
+		/*Justificar*/
+		ul.fruits.options1 {justify-content: flex-start;}
+		ul.fruits.options2 {justify-content: flex-end;}
+		ul.fruits.options3 {justify-content: center;}
+		ul.fruits.options4 {justify-content: space-between;}
+		ul.fruits.options5 {justify-content: space-around;}
+	</style>
+</head>
+<body>
+	<h1>Justificar Flex Box</h1>
+	<h3>justify-content: flex-start</h3>
+	<ul class="fruits options1">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+
+
+	</ul>
+	<!-- -->
+	<h3>justify-content: flex-end</h3>
+	<ul class="fruits options2">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<!-- --> 
+	<h3>justify-content: center</h3>
+	<ul class="fruits options3">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	
+
+	</ul>
+	<!-- -->
+	<h3>justify-content: space-between</h3>
+	<ul class="fruits options4">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+
+	</ul>
+	<h3>justify-content: space-around</h3>
+	<ul class="fruits options5">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+
+	</ul>
+</body>
+</html>

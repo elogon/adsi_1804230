@@ -1,0 +1,36 @@
+body {
+  font: 16px arial; }
+
+main {
+  margin: 40px auto;
+  width: 1216px; }
+  main h1 {
+    text-align: center; }
+  main section {
+    display: inline-block;
+    height: 240px;
+    margin: 0px 8px;
+    width: 380px; }
+    main section.day {
+      background: url(../imgs/day.png) no-repeat center;
+      background-size: cover; }
+    main section div {
+      background: url(../imgs/night.png) no-repeat center;
+      background-size: cover;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.5s ease;
+      -webkit-clip-path: polygon(50% 100%, 0% 100%, 100% 100%);
+      width: 100%; }
+    main section:nth-of-type(1):hover div {
+      animation: 1s animClip1 ease 1 forwards; }
+
+@keyframes animClip1 {
+  0% {
+    -webkit-clip-path: polygon(46% 100%, 0% 100%, 100% 100%); }
+  50% {
+    -webkit-clip-path: polygon(46% 100%, 0% 100%, 100% 100%); }
+  100% {
+    -webkit-clip-path: polygon(46% 100%, 0% 100%, 100% 100%); } }
+
+/*# sourceMappingURL=09_mixins.css.map */

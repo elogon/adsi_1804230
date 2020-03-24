@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alineacion Items Flex Box</title>
+	<style>
+		body {
+			font:16px Arial;
+			color:#666;
+		}
+		h3 {
+			border:2px solid #de908e;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		ul.fruits {
+			background-color:#de908e;
+			border-radius: 4px;
+			display: flex; /*Activar FlexBox*/
+			height: 768px;
+			list-style: none;
+			padding: 0px;
+			margin:20px 0px;
+
+		}
+		ul.fruits li {
+			background-color:#c9e1d3;
+			margin:4px;
+		}
+		/*Alineacion*/
+		ul.fruits.options1 {align-items: stretch;}
+		ul.fruits.options2 {align-items: flex-start;}
+		ul.fruits.options3 {align-items: flex-end;}
+		ul.fruits.options4 {align-items: center;}
+		ul.fruits.options5 {align-items: baseline;}
+	</style>
+</head>
+<body>
+	<h1>Alineacion Items Flex Box</h1>
+	<h3>align-items: stretch</h3>
+	<ul class="fruits options1">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<!-- -->
+	<h3>align-items: flex-start</h3>
+	<ul class="fruits options2">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<!-- --> 
+	<h3>align-items: flex-end</h3>
+	<ul class="fruits options3">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<!-- -->
+	<h3>align-items: center</h3>
+	<ul class="fruits options4">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+	<!-- -->
+	<h3>align-items: baseline</h3>
+	<ul class="fruits options5">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg" height="400px"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg" height="50px"></li>
+	</ul>
+</body>
+</html>

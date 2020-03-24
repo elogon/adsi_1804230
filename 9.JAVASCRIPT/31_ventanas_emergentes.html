@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ventanas (emergentes)</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<main>
+		<h1>Ventanas (emergentes)</h1>
+		<h3 id="answer"></h3>
+
+	</main>
+	<script>
+		//variables
+		var answer = document.getElementById('answer');
+		if(confirm('Usted quiere responder una pregunta?')){
+			var ans = prompt('cuanto es 3 ^ 2 ?');
+			if(ans == 9){
+				answer.innerHTML = 'Respuesta correcta!';
+			}else{
+				answer.innerHTML = 'Respuesta incorrecta!';
+			}
+		}else{
+			alert('Muchas gracias!');
+		}
+	</script>
+</body>
+</html>

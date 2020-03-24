@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Carousel Slider (jQuery)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<style>
+		main {
+			width: 1024px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Carousel Slider (jQuery)</h1>
+		<section class="owl-carousel owl-theme">
+			<img src="img/land1.jpg">
+			<img src="img/land2.jpeg">
+			<img src="img/land3.jpg">
+			<img src="img/land4.jpg">
+			<img src="img/land5.jpg">
+			<img src="img/land6.jpg">
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.owl-carousel').owlCarousel({
+				items: 3,
+				loop: true,
+				margin: 10,
+				nav: true
+			});
+		});
+	</script>
+</body>
+</html>

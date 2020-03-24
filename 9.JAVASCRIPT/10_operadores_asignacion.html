@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores (Asignacion)</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="CSS/table.css">
+</head>
+<body>
+	<main>
+		<h1>Operadores (Asignacion)</h1>
+		<table>
+			<thead>
+				<tr>
+					<td colspan="4">
+						<input id="vx" type="number" placeholder="valor de x">
+						<input id="vy" type="number" placeholder="valor de y">
+					</td>
+				</tr>
+				<tr>
+					<th>Operador</th>
+					<th>Ejemplo</th>
+					<th>Igual</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>=</td>
+					<td>x=y</td>
+					<td id="vx11"></td>
+					<td id="vx12"></td>
+				</tr>
+				<tr>
+					<td>+=</td>
+					<td>x+=y</td>
+					<td>x= x + y</td>
+					<td id="vx2"></td>
+				</tr>
+				<tr>
+					<td>-=</td>
+					<td>x-=y</td>
+					<td>x = x - y</td>
+					<td id="vx3"></td>
+				</tr>
+				<tr>
+					<td>*=</td>
+					<td>x*=y</td>
+					<td>x = x * y</td>
+					<td id="vx4"></td>
+				</tr>
+				<tr>
+					<td>/=</td>
+					<td>x/=y</td>
+					<td>x = x / y</td>
+					<td id="vx5"></td>
+				</tr>
+				<tr>
+					<td>x%=</td>
+					<td>x%=y</td>
+					<td>x = x % y</td>
+					<td id="vx6"></td>
+				</tr>
+					
+		</table>
+	</main>	
+	<script>
+		//variables
+		var vx  = document.getElementById('vx');
+		var vy  = document.getElementById('vy');
+
+		var vx11 = document.getElementById('vx11');
+		var vx12 = document.getElementById('vx12');
+
+		var vx2 = document.getElementById('vx2');
+		var vx3 = document.getElementById('vx3');
+		var vx4 = document.getElementById('vx4');
+		var vx5 = document.getElementById('vx5');
+		var vx6 = document.getElementById('vx6');
+
+		function calcValues(x, y){ 
+			x = parseInt(x);
+			xb = parseInt(x);
+			y = parseInt(y);
+			//------------------------
+			vx11.innerHTML = "x="+y;
+			vx12.innerHTML = "x="+y;
+			//------------------------
+			vx2.innerHTML = "x="+(x+=y);
+			//------------------------
+			x = xb;
+			vx3.innerHTML = "x="+(x-=y);
+			//------------------------
+			x = xb;
+			vx4.innerHTML = "x="+(x*=y);
+			//------------------------
+			x = xb;
+			vx5.innerHTML = "x="+(x/=y);
+			//------------------------
+			x = xb;
+			vx6.innerHTML = "x="+(x%=y);
+			
+
+		}
+			
+		
+
+		//evento
+		vx.onkeyup = function(){
+			valy= vy.value;
+			valx= this.value;
+
+			if(valx.length > 0 && valx.length < 12){
+				calcValues(valx, valy);
+				
+			    
+			}
+			
+		}
+		vy.onkeyup = function(){
+			valy= this.value;
+			valx= vx.value;
+
+			if(valy.length > 0 && valy.length < 12){
+				calcValues(valx, valy);
+				
+			    
+			}
+			
+		}
+	</script>				
+</body>
+</html>

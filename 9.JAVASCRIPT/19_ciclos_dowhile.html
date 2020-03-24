@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos (do/while)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/table.css">
+</head>
+<body>
+	<main>
+		<h1>Ciclos (do/while)</h1>
+		<fieldset>
+			<legend><h4>Factorial (N!)</h4></legend>
+			<input type="number" id="num" required>
+			<button id="calc">Calcular</button>
+		</fieldset>
+		<table id="fact"></table>
+		<script>
+			// Variables
+			var calc = document.getElementById('calc');
+			var fact = document.getElementById('fact');
+
+			//Eventos
+			calc.onclick = function() {
+				var num = document.getElementById('num').value;
+				var i = 1;
+				var f = 1;
+				if(num >= 1 && num <= 10) {
+					fact.innerHTML = "<tr><th>N</th><th>N!</th></tr>"
+					do {
+						f = f*i;
+						fact.innerHTML += "<tr><td>"+i+"</td><td>"+f+"</td></tr>";
+						i++;
+					}while(i<=num) 
+
+				} else {
+					alert('Debe ingresar un numero del 1 al 10!');
+				}
+			} 
+			
+		</script>
+	</main>
+</body>
+</html>

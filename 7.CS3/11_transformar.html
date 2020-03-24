@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transformar</title>
+	<style>
+		body {
+			font-family: Arial;
+		}
+		h1, h3{
+			stext-align: center;
+		}
+		section {
+			border:2px solid rgba(0,0,0,.2);
+			margin:20px auto;
+			padding: 20px;
+			width: 500px;
+		}
+		section.div {
+			background: url(Imgs/carta.jpg) no-repeat center;
+			box-shadow: 0px 0px 12px rgba(0,0,0,0.8);
+			border-radius: 10px;
+			height: 331px;
+			margin:20px auto;
+			width: 226px;
+		}
+		div.tf1 {
+			transform: translate(145px,30px);
+			/*transform: translateX(160px) translateY(30px);*/
+		}
+		div.tf2 {
+			transform:rotate(-45deg); 
+			/*transform:rotateX(-45deg) rotateY(-45deg);*/
+			
+		}
+		div.tf3 {
+			transform: scale(0.5);
+			/*transform:scaleX(0.5) scaleY(0.5);*/
+		}
+		div.tf4 {
+			transform: skew(10deg);
+			/*transform:swekX(10) skewY(10);*/
+		}
+		div.tf5 {
+			transform: scale(0.5) rotate(90deg) skew(10deg);
+		}
+	</style>
+</head>
+<body>
+	<h1>Transformar</h1>
+	<section>
+		<h3></h3>
+		<div class="tf1"></div>
+	</section>
+	<section>
+		<h3></h3>
+		<div class="tf2"></div>
+	</section>
+	<section>
+		<h3></h3>
+		<div class="tf3"></div>
+	</section>
+	<section>
+		<h3></h3>
+		<div class="tf4"></div>
+	</section>
+	<section>
+		<h3></h3>
+		<div class="tf5"></div>
+	</section>
+</body>
+</html>

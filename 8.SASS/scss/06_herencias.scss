@@ -1,0 +1,60 @@
+body {
+	font:16px Arial;
+}
+main {
+	margin: 20px auto;
+	width: 960px;
+	h1 {
+		text-align: center;
+
+	}
+	section.slider {
+		height: 640px;
+		overflow: hidden;
+		position: relative;
+		div.sliders {
+			position: absolute;
+			img {
+				position: absolute;
+				transition:left 1s;
+				&#slider1 {
+					left:0px;
+				}
+				&#slider2 {
+					left:960px;
+				}
+				&#slider3 {
+					left:1920px;
+				}
+				&#slider4 {
+					left:2880px;
+				}
+				&#slider5 {
+					left:3840px;
+				}
+			}
+		}
+		div.controls {
+			position: absolute;
+			bottom:20px;
+			left: 50%;
+			a {
+				background-color: rgba(255,255,255,.4);
+				border:2px solid rgba(255,255,255,.6);
+				border-radius:20px;
+				display: inline-block;
+				height: 20px;
+				text-decoration: none;
+				text-indent: -9999px;
+				transition: all 0.2s;
+				transform: scale(.8);
+				width: 20px;
+				&:hover {
+					border: 2px solid rgba(255,255,255,.8);
+					background-color: rgba(255,255,255,.6);
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}

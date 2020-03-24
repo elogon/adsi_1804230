@@ -1,0 +1,20 @@
+body {
+	background-color: #b9d8ff;
+	color: #4f5c6e;
+	font: 16px Arial;
+}
+main {
+	background-color: #fff;
+	padding: 20px;
+	margin: 20px auto;
+	width: 600px;
+}
+main h1,
+main h2,
+main h3, 
+main h4,
+main h5 {
+	text-align: center;
+	border-bottom: 1px solid #4f5c6e;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "DragDrop",
+  "version": "1.0.0",
+  "description": "Drag and Drop pokeballs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/ofac/adsi-1804230",
+  "keywords": [
+    "Electron",
+    "jQuery"
+  ],
+  "author": "Ofac",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^6.0.7"
+  }
+}

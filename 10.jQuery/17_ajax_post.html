@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax (Metodo POST)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		section.image{
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			border: 2px solid #4f5c6e;
+			margin: 20px auto;
+			height: 550px;
+			width: 400px;
+
+		}
+		select {
+			display: block;
+			margin: 20px auto;
+			width: 160px;
+			padding: 6px;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Ajax (Metodo POST)</h1>
+		<section class="image animated"></section>
+		<select class="images">
+			<option value="">Seleccione Imagen</option>
+			<option value="1">Naruto Uzumaki</option>
+			<option value="2">Gara</option>
+			<option value="3">Sasuke Uchiha</option>
+		</select>
+		<script src="js/jquery-3.4.1.js"></script>
+		<script>
+		$(document).ready(function($) {
+			// Eventos
+			$('.images').change(function(event) {
+				$img = $(this).val();
+				if ($img.length > 0) {
+					$('.image').removeClass('flipInY');
+					// POST
+					$.post('php/images.php', {img: $img}, function(data) {
+						$('.image').addClass('flipInY');
+						$('.image').css('background-image','url('+data+')');
+					});
+				}
+			});
+		});
+	</script>
+	</main>
+</body>
+</html>

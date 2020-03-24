@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animaciones</title>
+	<style>
+		body {
+			margin: 0px;
+		}
+		section.landscape {
+			background: url(Imgs/landscape.jpg) no-repeat center;
+			background-size: cover;
+			height: 100vh;
+		}
+		div.path {
+			position: relative;
+			height: 80px;
+			width: 120px;
+			/*---------*/
+			animation:animPath 5s infinite;
+		}
+		div.path div.airplane {
+			background: url(Imgs/airplane.png) no-repeat center;
+			background-size: cover;
+			height: 80px;
+			position: relative;
+			transform: rotateY(180deg);
+			/*------------*/
+			animation:animAirPlane 4s infinite;
+		}
+		@keyframes animAirPlane {
+			0%, 100% {top:0px; }
+			25%, 100% {top: -4px; }
+			50%, 100% {top:0px; }
+			75%, 100% {top:4px; }
+			100%, 100% {top:0px; }
+		}
+		@keyframes animPath {
+			0% {
+				left:0px;
+				top:50px;
+				transform: scale(1) rotateY(180deg);
+			}
+			50.1% {
+				left:1200px;
+				top:50px;
+				transform: scale(1) rotateY(180deg);
+			}
+			75% {
+				left:600px;
+				top:300px;
+				transform: scale(1) rotateY(180deg);
+			}
+			100% {
+				left:;
+				top:;
+				transform: scale(10) rotateY(180deg);
+			}
+		}
+	</style> 
+<body>
+	<section class="landscape">
+		<div class="path">
+			<div class="airplane"></div>
+		</div>
+	</section>
+</body>
+</html>

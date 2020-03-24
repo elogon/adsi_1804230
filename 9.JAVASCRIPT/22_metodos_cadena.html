@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <h1>metodos cadena</h1>
+      <textarea id="string" rows="4" cols="60" placeholder="ingresar texto"></textarea>
+      <br>
+      <label for="toLower">
+          <input type="radio" id="toLower" value="tl" name="transf"> minuscula
+      </label>
+      <br>
+      <label for="toUpper">
+          <input type="radio" id="toUpper" value="tu" name="transf">MAYUSCULA
+      </label>
+      <br>
+      <br>
+      <input type="text" id="oword" placeholder="palabra origen">
+      por
+      <input type="text" id="rword" placeholder="palabra  remplazo">
+      <br>
+      <br>
+      <input type="text" id="ni" placeholder="pos inicial">
+      hasta
+      <input type="text" id="nf" placeholder="pos final">
+      <br>
+      <br>
+
+      <button id="btnAnalize">analizar</button>
+      <ul id="data"></ul>
+
+
+
+    </main>
+    <script>
+      var string = document.getElementById('string');
+      var toLower = document.getElementById('toLower');
+      var toUpper = document.getElementById('toUpper');
+      var btnAnalize = document.getElementById('btnAnalize');
+      var oword = document.getElementById('oword');
+      var rword = document.getElementById('rword');
+      var ni = document.getElementById('ni');
+      var nf = document.getElementById('nf');
+      var data = document.getElementById('data');
+
+
+
+      var upper = false;
+
+      toLower.onchange= function(){
+        upper=false;
+
+      }
+      toUpper.onchange=function(){
+        upper = true;
+      }
+
+      btnAnalize.onclick = function(){
+         var tstring=string.value;
+         var toword = oword.value;
+         var trword = rword.value;
+         var tni=  parseInt(ni.value);
+         var tnf = parseInt(nf.value);
+        if(upper) {
+            data.innerHTML="<li>"+tstring.toUpperCase()+"</li>";
+        }else {
+            data.innerHTML="<li>"+tstring.toLowerCase()+"</li>";
+        }
+        data.innerHTML+="<li> longitud cadena = "+tstring.length+ " caracteres</li>";
+
+        data.innerHTML+="<li> cadena reemplazo = "+tstring.replace(toword,trword)+"</li>";
+
+          data.innerHTML+="<li> cadena cortada = "+tstring.substring(tni,tnf)+"</li>";
+
+      }
+    </script>
+
+  </body>
+</html>

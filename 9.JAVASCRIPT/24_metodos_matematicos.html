@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+      button{
+        cursor:pointer;
+        width: 200px;
+        height: 100px;
+        border-radius:4px;
+
+      }
+      button#random{
+        border: 2px solid #204930;
+        background-color: #2f7046;
+        color:#fff;
+        font-size: 4em;
+
+      }
+      button#colors{
+        background-color: #fff;
+        border: 2px solid black;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <h1>Metodos Matematicos</h1>
+      <h4>aleatorios: </h4>
+      <button  id="random">0</button>
+      <h4>aleatorio colores: </h4>
+      <button  id="colors">white</button>
+      <h4>max - min (3,25,89,15,9,-45,56,23,-12)</h4>
+      <ul id="printm"></ul>
+      <!-- pow () es potencia -->
+      <!-- abs() es que cambia numeros negativos a positivos  -->
+    </main>
+    <script>
+      var random = document.getElementById('random');
+      var colors =document.getElementById('colors');
+      var lcolors =['Aquamarine','Beige','LightBlue','Violet','PeachPuff']
+      var numbers =[3,25,89,15,9,-45,56,23,-12];
+      var printm = document.getElementById('printm');
+
+
+      printm.innerHTML="<li> maximo: " +Math.max(3,25,89,15,9,-45,56,23,-12)+"</li>";
+      printm.innerHTML+="<li> minimo:" +Math.min(3,25,89,15,9,-45,56,23,-12)+"</li>";
+
+      random.onclick=function(){
+        this.innerHTML=Math.round(Math.random()*100);
+      }
+      colors.onclick=function(){
+        var color =Math.round(Math.random()*4);
+        this.style.backgroundColor= lcolors[color];
+        this.innerHTML=lcolors[color];
+      }
+    </script>
+  </body>
+</html>

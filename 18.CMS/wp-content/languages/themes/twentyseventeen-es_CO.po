@@ -1,0 +1,129 @@
+# Translation of Themes - Twenty Seventeen in Spanish (Colombia)
+# This file is distributed under the same license as the Themes - Twenty Seventeen package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-01-06 13:50:39+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: es_CO\n"
+"Project-Id-Version: Themes - Twenty Seventeen\n"
+
+#: search.php:54
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Lo siento pero no hay nada que se ajuste a tus criterios de búsqueda. Por favor, inténtalo de nuevo con palabras claves distintas."
+
+#: template-parts/post/content-none.php:17 search.php:21
+msgid "Nothing Found"
+msgstr "No se encontró"
+
+#: template-parts/post/content-none.php:24
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "¿Está listo para publicar su primera entrada? <a href=\"%1$s\">Empiece aquí</a>."
+
+#: single.php:33 comments.php:71
+msgid "Previous"
+msgstr "Anterior"
+
+#: single.php:34 comments.php:72
+msgid "Next"
+msgstr "Siguiente"
+
+#: template-parts/post/content-none.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que no podemos encontrar lo que está buscando. Tal vez buscando puede que le ayude."
+
+#: searchform.php:19
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Buscar &hellip;"
+
+#: searchform.php:20
+msgctxt "submit button"
+msgid "Search"
+msgstr "Búsqueda"
+
+#: template-parts/page/content-page.php:26
+#: template-parts/post/content-audio.php:91 template-parts/post/content.php:64
+#: template-parts/post/content-gallery.php:78
+#: template-parts/post/content-video.php:90
+#: template-parts/post/content-image.php:68
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: template-parts/navigation/navigation-top.php:17
+msgid "Menu"
+msgstr "Menú"
+
+#: header.php:28
+msgid "Skip to content"
+msgstr "Ir al contenido"
+
+#: functions.php:65 functions.php:214
+msgid "Social Links Menu"
+msgstr "Menú de enlaces sociales"
+
+#: comments.php:82
+msgid "Comments are closed."
+msgstr "Los Comentarios están cerrados."
+
+#: archive.php:50 search.php:47 index.php:54
+msgid "Page"
+msgstr "Página"
+
+#: archive.php:49 search.php:46 index.php:53
+msgid "Next page"
+msgstr "Próxima página"
+
+#: 404.php:21
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Vaya! No se pudo encontrar esa página."
+
+#: 404.php:24
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "Al parecer nada se encontró en esa ubicación. ¿Tal vez desea intentar otra búsqueda?"
+
+#: archive.php:48 search.php:45 index.php:52
+msgid "Previous page"
+msgstr "Página anterior"
+
+#: inc/customizer.php:63
+msgid "Dark"
+msgstr "Oscuro"
+
+#: template-parts/footer/site-info.php:19
+msgid "Proudly powered by %s"
+msgstr "Gestionado con %s"
+
+#: footer.php:26
+msgid "Footer Social Links Menu"
+msgstr ""
+"Footer Social Links Menu\n"
+"\n"
+"Menú de Links Sociales del pié de página"
+
+#: searchform.php:17
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar por:"
+
+#. translators: %s: Name of current post
+#: template-parts/page/content-front-page-panels.php:45
+#: template-parts/page/content-front-page.php:42
+#: template-parts/post/content-audio.php:84 template-parts/post/content.php:57
+#: template-parts/post/content-gallery.php:71
+#: template-parts/post/content-video.php:83
+#: template-parts/post/content-image.php:61 functions.php:390
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Seguir leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#. Author of the theme
+msgid "the WordPress team"
+msgstr "El equipo de WordPress"
+
+#. Author URI of the theme
+#: template-parts/footer/site-info.php:18
+msgid "https://wordpress.org/"
+msgstr "https://es-co.wordpress.org/"

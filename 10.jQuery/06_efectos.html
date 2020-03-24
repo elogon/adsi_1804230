@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Efectos (jQuery)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		main {
+			position: relative;
+			text-align: center;
+			height: 500px;
+		} 
+		main section.fx {
+			position: absolute;
+			top: 107px; left: 0px;
+		}
+		main section.fx li {
+			background-color: #4f5c6e;
+			color: #fff;
+			list-style: none;
+			padding: 4px 16px;
+			margin: 4px 0px;
+		}
+		main section.fx li:hover {
+			background-color: #14171a;
+			cursor: pointer;
+		}
+		main img.character {
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Efectos (jQuery)</h1>
+		<section class="fx">
+			<li class="fx1">hide</li>
+			<li class="fx2">show</li>
+			<li class="fx3">toggle</li>
+			<li class="fx4">slideUp</li>
+			<li class="fx5">slideDown</li>
+			<li class="fx6">slideToggle</li>
+			<li class="fx7">fadeOut</li>
+			<li class="fx8">fadeIn</li>
+			<li class="fx9">fadeToggle</li>
+			<li class="fx10">fadeTo</li>
+			<li class="fx11">animate</li>
+			<li class="fx12">stop</li>
+		</section>
+		<img src="imgs/tangiro.jpg" class="character" width="400px">
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			$chr = $('.character');
+			// fx1 - - - - - - - - - - - - - - -
+			$('.fx1').click(function(event) {
+				$chr.hide();
+			});
+			// fx2 - - - - - - - - - - - - - - -
+			$('.fx2').click(function(event) {
+				$chr.show();
+			});
+			// fx3 - - - - - - - - - - - - - - -
+			$('.fx3').click(function(event) {
+				$chr.toggle();
+			});
+			// fx4 - - - - - - - - - - - - - - -
+			$('.fx4').click(function(event) {
+				$chr.slideUp('slow');
+			});
+			// fx5 - - - - - - - - - - - - - - -
+			$('.fx5').click(function(event) {
+				$chr.slideDown('slow');
+			});
+			// fx6 - - - - - - - - - - - - - - -
+			$('.fx6').click(function(event) {
+				$chr.slideToggle();
+			});
+			// fx7 - - - - - - - - - - - - - - -
+			$('.fx7').click(function(event) {
+				$chr.fadeOut(2000);
+			});
+			// fx8 - - - - - - - - - - - - - - -
+			$('.fx8').click(function(event) {
+				$chr.fadeIn(2000);
+			});
+			// fx9 - - - - - - - - - - - - - - -
+			$('.fx9').click(function(event) {
+				$chr.fadeToggle();
+			});
+			// fx10 - - - - - - - - - - - - - - -
+			$('.fx10').click(function(event) {
+				$chr.fadeTo('slow', 0.5);
+			});
+			// fx11 - - - - - - - - - - - - - - -
+			$('.fx11').click(function(event) {
+				$chr.animate({left: '100px'}, 4000);
+			});
+			// fx12 - - - - - - - - - - - - - - -
+			$('.fx12').click(function(event) {
+				$chr.stop();
+			});
+		});
+	</script>
+</body>
+</html>

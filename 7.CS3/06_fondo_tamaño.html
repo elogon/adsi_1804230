@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Fondo (Tamaño)</title>
+	<style>
+		section {
+			background: url(Imgs/mikasa.jpg) no-repeat center;
+			border:2px solid #a00;
+			height: 400px;
+			margin: 20px auto;
+			width: 500px;
+		}
+		section h3 {
+			background-color: rgba(255,255,255,0.7);
+			text-align: center;
+			padding: 20px;
+			margin-top: 0px;
+			color: #a90;
+		}
+		section.t1 {
+			background-size: cover;
+		}
+		section.t2 {
+			background-size: contain;
+		}
+		section.t3 {
+			background-position: top center;
+			background-size: 260%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Fondo (Tamaño)</h1>
+	<section class="t1">
+		<h3>background-size:cover</h3>
+	</section>
+	<section class="t2">
+		<h3>background-size:contain</h3>
+	</section>
+	<section class="t3">
+		<h3>background-size:xyz</h3>
+	</section>
+	<section class="t4">
+		<h3>background-size:xyz</h3>
+	</section>
+	
+</body>
+</html>

@@ -1,0 +1,25 @@
+section figure {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+section figure:hover {
+  transform: scale(1.1);
+}
+section figure:hover.filter1 {
+  filter: grayscale(1);
+}
+section figure:hover.filter2 {
+  filter: blur(2px);
+}
+section figure:hover.filter3 {
+  filter: opacity(0.5);
+}
+section figure:hover.filter4 {
+  filter: sepia(0.8);
+}
+section figure:hover.filter5 {
+  filter: invert(1);
+}
+section figure:hover.filter6 {
+  filter: brightness(2);
+}

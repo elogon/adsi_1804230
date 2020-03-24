@@ -1,0 +1,42 @@
+button#menu {
+    display: none;
+}
+
+button#menu:focus + nav#superior {
+    display: block;
+}
+
+nav#superior ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#superior ul a {
+    display: block;
+    width: 8em;
+    text-decoration: none;
+    border: 1px solid #BE353D;
+    padding: .3em 0;
+    text-align: center;
+    color: #FA453B;
+    background: #EF8E76;
+    transition: 1s all;
+}
+
+nav#superior ul a:hover {
+    background: #ec7b5f;
+}
+
+@media all and (max-width: 700px) {
+    button#menu {
+        display: block;
+    }
+	nav#superior {
+        display: none;
+    }
+	nav#superior ul {
+        flex-direction: column;
+    }
+}

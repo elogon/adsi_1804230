@@ -1,0 +1,178 @@
+@font-face {
+	font-family: calculator;
+	src: url(../fonts/Calculator.ttf);
+}
+main.calc {
+	background: url(../imgs/calc/hcalc.png) no-repeat center;
+	height: 550px;
+	margin: 120px auto;
+	position: relative;
+	width: 384px;
+
+}
+main.calc output#display {
+	display: block;
+	height: 79px;
+	font-family: calculator;
+	font-size: 2.6em;
+	color: #333638;
+	left:20px;
+	line-height: 2em;
+	position: absolute;
+	text-align: right;
+	top: 13px;
+	width: 333px;
+	
+
+}
+main.calc ul.buttons {
+	list-style: none;
+	left: 23px ;
+	margin: 0px;
+	position: absolute;
+	top: 110px;
+	padding: 0px;
+	width: 330px;
+
+}
+main.calc ul.buttons li {
+	display: inline-block;
+	margin: 5px 0px 18px 20px;
+	height: 62px;
+	width: 62px;
+}
+main.calc ul.buttons li:nth-child(-n+4) {
+	margin-top: 0px;
+}
+main.calc ul.buttons li:nth-child(4n+1) {
+	margin-left: 0px;
+}
+main.calc ul.buttons li {
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: 0.25s all ease-in; 
+}
+main.calc ul.buttons li:hover {
+	cursor:pointer;
+	transform: scale(1.1)
+}
+
+main.calc ul.buttons li:nth-child(1) {
+	background: url(../imgs/calc/n7.png) ;
+}
+main.calc ul.buttons li:nth-child(1):hover {
+	background: url(../imgs/calc/hn7.png) ;
+}
+main.calc ul.buttons li:nth-child(2) {
+	background: url(../imgs/calc/n8.png) ;
+}
+main.calc ul.buttons li:nth-child(2):hover {
+	background: url(../imgs/calc/hn8.png) ;
+}
+main.calc ul.buttons li:nth-child(3) {
+	background: url(../imgs/calc/n9.png) ;
+}
+main.calc ul.buttons li:nth-child(3):hover {
+	background: url(../imgs/calc/hn9.png) ;
+}
+main.calc ul.buttons li:nth-child(4) {
+	background: url(../imgs/calc/mod.png) ;
+}
+main.calc ul.buttons li:nth-child(4):hover {
+	background: url(../imgs/calc/hmod.png) ;
+}
+main.calc ul.buttons li:nth-child(5) {
+	background: url(../imgs/calc/n4.png) ;
+}
+main.calc ul.buttons li:nth-child(5):hover {
+	background: url(../imgs/calc/hn4.png) ;
+}
+main.calc ul.buttons li:nth-child(6) {
+	background: url(../imgs/calc/n5.png) ;
+}
+main.calc ul.buttons li:nth-child(6):hover {
+	background: url(../imgs/calc/hn5.png) ;
+}
+main.calc ul.buttons li:nth-child(7) {
+	background: url(../imgs/calc/n6.png) ;
+}
+main.calc ul.buttons li:nth-child(7):hover {
+	background: url(../imgs/calc/hn6.png) ;
+}
+main.calc ul.buttons li:nth-child(8) {
+	background: url(../imgs/calc/prod.png) ;
+}
+main.calc ul.buttons li:nth-child(8):hover {
+	background: url(../imgs/calc/hprod.png) ;
+}
+main.calc ul.buttons li:nth-child(9) {
+	background: url(../imgs/calc/n1.png) ;
+}
+main.calc ul.buttons li:nth-child(9):hover {
+	background: url(../imgs/calc/hn1.png) ;
+}
+main.calc ul.buttons li:nth-child(10) {
+	background: url(../imgs/calc/n2.png) ;
+}
+main.calc ul.buttons li:nth-child(10):hover {
+	background: url(../imgs/calc/hn2.png) ;
+}
+main.calc ul.buttons li:nth-child(11) {
+	background: url(../imgs/calc/n3.png) ;
+}
+main.calc ul.buttons li:nth-child(11):hover {
+	background: url(../imgs/calc/hn3.png) ;
+}
+main.calc ul.buttons li:nth-child(12) {
+	background: url(../imgs/calc/subs.png) ;
+}
+main.calc ul.buttons li:nth-child(12):hover {
+	background: url(../imgs/calc/hsubs.png) ;
+}
+main.calc ul.buttons li:nth-child(13) {
+	background: url(../imgs/calc/n0.png) ;
+}
+main.calc ul.buttons li:nth-child(13):hover {
+	background: url(../imgs/calc/hn0.png) ;
+}
+main.calc ul.buttons li:nth-child(14) {
+	background: url(../imgs/calc/dot.png) ;
+}
+main.calc ul.buttons li:nth-child(14):hover {
+	background: url(../imgs/calc/hdot.png) ;
+}
+main.calc ul.buttons li:nth-child(15) {
+	background: url(../imgs/calc/plus.png) ;
+	margin-right: 60px
+}
+main.calc ul.buttons li:nth-child(15):hover {
+	background: url(../imgs/calc/hplus.png) ;
+}
+main.calc ul.buttons li:nth-child(16) {
+	background: url(..//Img.calc/equal.png) ;
+	height: 150px;
+	position: absolute;
+	right: 9px;
+
+}
+main.calc ul.buttons li:nth-child(16):hover {
+	background: url(..//Img.calc/equal.png) ;
+}
+main.calc ul.buttons li:nth-child(17) {
+	background: url(..//Img.calc/clear.png) ;
+}
+main.calc ul.buttons li:nth-child(17):hover {
+	background: url(..//Img.calc/hclear.png) ;
+}
+main.calc ul.buttons li:nth-child(18) {
+	background: url(..//Img.calc/aclear.png) ;
+}
+main.calc ul.buttons li:nth-child(18):hover {
+	background: url(..//Img.calc/haclear.png) ;
+}
+main.calc ul.buttons li:nth-child(19) {
+	background: url(..//Img.calc/dir.png) ;
+}
+main.calc ul.buttons li:nth-child(19):hover {
+	background: url(..//Img.calc/hdir.png) ;
+}

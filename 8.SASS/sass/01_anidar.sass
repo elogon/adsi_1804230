@@ -1,0 +1,39 @@
+body
+	color: #ddd
+	font-family: arial
+	background-color: crimson
+section
+	background-color: rgba(0,0,0,.5)
+	margin: 20px auto
+	width: 400px
+	padding: 40px
+	article
+		border: 2px dashed rgba(255,255,255,.5)
+		padding: 10px
+		h1:after
+			background: linear-gradient(to right, #00a63d, #dc143c)
+			display: block
+			position: absolute
+			height: 10px
+			width: 80%
+			top: calc(100% + 10px)
+			left: 50%
+			transform: translateX(-50%) skew(-50deg)
+			content: ""
+		h1
+			font-size: 2.4em
+			text-align: center
+			position: relative
+		h1:before
+			background: linear-gradient(to right, #dc143c, #00a63d)
+			display: block
+			position: absolute
+			height: 10px
+			width: 80%
+			top: calc(-100% + 20px)
+			left: 50%
+			transform: translateX(-50%) skew(-50deg)
+			content: ""
+		p
+			text-align: justify
+			line-height: 1.6em

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Selectores</title>
+	<style>
+		ul  {
+			width: 400px;
+		}
+		ul li {
+			padding: 10px;
+			margin: 2px;
+		}
+		ul.nth li:nth-child(3) {
+			background-color: purple;
+			color:#fff;
+		}
+		ul.nth li:nth-last-child(2) {
+			background-color: lime;
+			color:#fff;
+		} 
+		ul.child li:first-child,
+		ul.child li:last-child {
+			background-color: blue;
+			color:#fff;
+		}
+		article {
+			padding: 20px;
+			width: 360px;
+		}
+		#inicio:target,
+		#portafolio:target,
+		#contacto:target {
+			background-color: #5676d2;
+			
+		}
+		article.amarillo p::selection {
+			background-color: yellow;
+		}
+		article.azul p::selection {
+			background-color: blue;
+		}
+		article.rojo p::selection {
+			background-color: red;
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<h1>Nuevos Selectores</h1>
+	<h3>nth-child(n) | :nth-last-child(n)</h3>
+	<ul class="nth">
+		<li>Html</li>
+		<li>Css</li>
+		<li>JavaScript</li>
+		<li>Python</li>
+		<li>SQL</li>
+	</ul>
+
+	<h3>:first-child | :last-child</h3>
+	<ul class="child">
+		<li>C++</li>
+		<li>C#</li>
+		<li>Java</li>
+		<li>Ruby</li>
+		<li>Object Pascal</li>
+	</ul>
+	
+	
+	<h3>target</h3>
+	<ul class="traget">
+		<li><a href="#Inicio">Inicio</a></li>
+		<li><a href="#Portafolio">Portafolio</a></li>
+		<li><a href="#Contacto">Contacto</a></li>
+	</ul>
+	<article id="Inicio">
+		<h2>Inicio</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, quidem ut? Odit possimus veritatis hic labore modi error iusto praesentium nostrum eius, vero libero doloribus qui ipsum blanditiis consequatur? Hic porro nulla expedita, aliquam assumenda impedit quae molestias mollitia beatae numquam adipisci alias nemo et voluptatem aut iure ipsum recusandae.
+		</p>
+	</article>
+	<article id="Portafolio">
+		<h2>Portafolio</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, quidem ut? Odit possimus veritatis hic labore modi error iusto praesentium nostrum eius, vero libero doloribus qui ipsum blanditiis consequatur? Hic porro nulla expedita, aliquam assumenda impedit quae molestias mollitia beatae numquam adipisci alias nemo et voluptatem aut iure ipsum recusandae.
+		</p>
+	</article>
+	<article id="Contacto">
+		<h2>Contacto</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, quidem ut? Odit possimus veritatis hic labore modi error iusto praesentium nostrum eius, vero libero doloribus qui ipsum blanditiis consequatur? Hic porro nulla expedita, aliquam assumenda impedit quae molestias mollitia beatae numquam adipisci alias nemo et voluptatem aut iure ipsum recusandae.
+		</p>
+	</article>
+	<h3>::Selection</h3>
+	<article class='amarillo'>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non odio incidunt hic distinctio exercitationem aut corporis voluptatum labore magnam delectus, architecto, enim mollitia amet consectetur iusto quidem, facilis earum laboriosam.
+		</p>
+	</article>
+	</article>
+	<article class='azul'>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non odio incidunt hic distinctio exercitationem aut corporis voluptatum labore magnam delectus, architecto, enim mollitia amet consectetur iusto quidem, facilis earum laboriosam.
+		</p>
+	</article>
+	</article>
+	<article class='rojo'>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non odio incidunt hic distinctio exercitationem aut corporis voluptatum labore magnam delectus, architecto, enim mollitia amet consectetur iusto quidem, facilis earum laboriosam.
+		</p>
+	</article>
+</body>
+</html>

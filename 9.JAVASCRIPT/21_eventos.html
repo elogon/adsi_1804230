@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body onload="bienvenida();">
+	<main>
+		<h1>Eventos</h1>
+		<h4>Doble Click</h4>
+		<button id="btnDC"> # de doble clicks = 0</button>
+		<h4>Presionar tecla</h4>
+		<input type="text" id="iname" placeholder="Ingresar Nombre Completo">
+		<output id="pname"></output>
+	</main>
+	<script>
+		//variables
+		var btnDC = document.getElementById('btnDC');
+		var iname  = document.getElementById('iname');
+		var pname = document.getElementById('pname');
+		var cntDC = 0;
+		//EVENTOS
+		btnDC.ondblclick = function(){
+			this.innerHTML = "# de doble clicks ="+cntDC++;
+		}
+		iname.onkeydown = function(){
+			pname.value= this.value;
+		}
+
+		//funciones
+		function bienvenida(){
+			alert("Bienvenidos:\nla pagina a cargado con exito!");
+		}
+	</script>
+
+	
+</body>
+</html>

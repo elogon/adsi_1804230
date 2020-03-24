@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos (brea/continue)</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<main>
+		<h1>Ciclos (break/continue)</h1>
+		<fieldset>
+			<legend><h4>Fibonacci</h4></legend>
+			<input type="number" id="num" placeholder="Ingrese Número">
+			<button id="calc">Calcular</button>
+			<br></br>
+			<output id="serie"></output>
+		</fieldset>
+	</main>
+	<script>
+		var calc  = document.getElementById("calc");
+		var serie = document.getElementById("serie");
+		calc.onclick = function() {
+			var num = document.getElementById("num").value;
+			var act = 1;
+			var ant = 0;
+			var sum = 0;
+			serie.innerHTML = ant+","+act;
+			for(var i = 1; i <= num; i++) {
+				sum = act + ant;
+				ant = act;
+				act = sum;
+				serie.innerHTML +=","+sum;
+				if(i == 10)break; //No fibonacci superiores a 20 
+			}
+		}
+	</script>
+	
+</body>
+</html>

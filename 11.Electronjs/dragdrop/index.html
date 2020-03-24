@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery UI (Drag/Drop)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<style>
+		main {
+			width: 800px;
+		}
+		section.landscape {
+			background: url(imgs/bg-pokemon.png) no-repeat center;
+			height: 600px;
+			margin: 20px auto;
+			position: relative;
+			width: 600px;
+		}
+		div.pokeball {
+			background: url(imgs/pokeball.png) no-repeat center;
+			top: 35px; left: 140px;
+		}
+		div.superball {
+			background: url(imgs/superball.png) no-repeat center;
+			top: 35px; left: 350px;
+		}
+		div.pokeball,
+		div.superball {
+			background-size: cover;
+			height: 90px;
+			position: absolute;
+			width: 90px;
+			z-index: 9;
+		}
+		div.bulbassaur,
+		div.venussaur {
+			position: absolute;
+		}
+		div.bulbassaur {
+			background: url(imgs/bulbasaur.png) no-repeat center;
+			background-size: cover;
+			height: 154px;
+			bottom: 20px; left: 20px;
+			width: 154px;
+		}
+		div.venussaur {
+			background: url(imgs/venussaur.png) no-repeat center;
+			background-size: contain;
+			height: 257px;
+			bottom: 20px; right: 10px;
+			width: 374px;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>jQuery UI (Drag/Drop)</h1>
+		<section class="landscape">
+			<div class="drag pokeball"></div>
+			<div class="drag superball"></div>
+			<div class="pk bulbassaur"></div>
+			<div class="pk venussaur"></div>
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('div.drag').draggable({
+				containment: '.landscape',
+				cursor: 'move',
+				snap: '.pk',
+				snapMode: 'inner',
+				revert: 'invalid'
+			});
+			$('div.bulbassaur').droppable({
+				accept: '.drag',
+				drop: function(evt, ui) {
+					$drag = $(ui.draggable);
+					$drop = $(this);
+					$drop.fadeOut(1000);
+					$drag.addClass('animated bounce infinite')
+				}
+			});
+			$('div.venussaur').droppable({
+				accept: '.superball',
+				drop: function(evt, ui) {
+					$drag = $(ui.draggable);
+					$drop = $(this);
+					$drop.fadeOut(1000);
+					$drag.addClass('animated bounce infinite')
+				}
+			});
+		});
+	</script>
+
+</body>
+</html>

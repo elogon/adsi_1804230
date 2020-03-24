@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Adicionar/Remover Elementos (Manipulación DOM)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		section.container {
+			margin: 10px auto;
+			width: 410px;
+		}
+		section.container div {
+			display: inline-block;
+			width: 200px;
+			vertical-align: top;
+		}
+		section.container div.lists ul {
+			list-style: none;
+			padding: 0px;
+			margin: 20px 0px;
+		}
+		section.container div.lists ul li {
+			background-color: #ddd;
+			padding: 4px;
+			position: relative;
+			margin: 2px;
+		}
+		section.container div.lists ul li button {
+			border: none;
+			background-color: #9c002f;
+			color: #fff;
+			cursor: pointer;
+			position: absolute;
+			right: 0px; top: 2px;
+		}
+		section.container div.lists ul li.empty {
+			background-color: transparent;
+			text-indent: -9999px;
+		} 
+		/* - - - - - - - - - - - - - - - - - - */
+		section.container div.buttons input,
+		section.container div.buttons button {
+			display: block;
+			margin: 4px auto;
+			outline: none;
+			padding: 4px;
+			width: 120px;
+		}
+
+		section.container div.buttons input {
+			border: 1px solid #4f5c6e;
+		}
+
+		section.container div.buttons button {
+			border: none;
+			background-color:  #2b7049;
+			color: #fff;
+			cursor: pointer;
+			width: 130px;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Adicionar/Remover Elementos (Manipulación DOM)</h1>
+		<section class="container">
+			<div class="lists">
+				<ul class="cars">
+					<li>Audi <button>&times;</button></li>
+					<li>Porshe <button>&times;</button></li>
+					<li>Volkswagen <button>&times;</button></li>
+					<li class="empty"> Eliminar <button>Eliminar Todos</button></li>
+				</ul>
+			</div>
+			<div class="buttons">
+				<input type="text" class="car" placeholder="Name of Vehicle">
+				<button class="btnAppend">Append</button>
+				<button class="btnPrepend">Prepend</button>
+				<button class="btnAfter">After</button>
+				<button class="btnBefore">Before</button>
+			</div>
+		</section>
+	</main>
+
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			$('.btnAppend').click(function(event) {
+				if(validateVehicle()) {
+					$('ul.cars').append('<li>'+$('.car').val()+'<button>&times;</button></li>');
+					$('li.empty').remove();
+					$('ul.cars').append('<li class="empty"> Eliminar <button>Eliminar Todos</button></li>')
+					$('.car').val('');
+				}
+			});
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			$('.btnPrepend').click(function(event) {
+				if(validateVehicle()) {
+					$('ul.cars').prepend('<li>'+$('.car').val()+'<button>&times;</button></li>');
+					$('.car').val('');
+				}
+			});
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			$('.btnAfter').click(function(event) {
+				$('ul.cars:last-child').after('<ul class="cars"> \
+					<li>Mini <button>&times;</button></li> \
+					<li>Bentley <button>&times;</button></li> \
+					<li>Range Rover <button>&times;</button></li> \
+					<li class="empty"> Eliminar <button>Eliminar Todos</button></li> \
+				</ul>');
+			});
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			$('.btnBefore').click(function(event) {
+				$('ul.cars:first-child').before('<ul class="cars"> \
+					<li>Renault <button>&times;</button></li> \
+					<li>Citroên <button>&times;</button></li> \
+					<li>Peugeot <button>&times;</button></li> \
+					<li class="empty"> Eliminar <button>Eliminar Todos</button></li> \
+				</ul>');
+			});
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			$('li:not(.empty) button').click(function(event) {
+				$(this).parent().remove();
+			});
+			$('body').on('click', 'li:not(.empty) button', function(event) {
+				event.preventDefault();
+				$(this).parent().remove();
+			});
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			$('body').on('click', 'li.empty button', function(event) {
+				event.preventDefault();
+				$(this).parent().parent().empty();
+			});
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+			function validateVehicle() {
+				if($('.car').val().length > 0) {
+					return true;
+				}
+			}
+			// ==-== ==-== ==-== ==-== ==-== ==-== ==-==
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Acceso a Metodos (Objetos)</title>
+	<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+	<main>
+		<h1>Acceso a Metodos (Objetos)</h1>
+		<ul id="output">
+			
+		</ul>
+	</main>
+	<script>
+		var outp = document.getElementById('output');
+		var pokemon = {
+			//Atributos
+			name: "Charmander",
+			type: "Fire",
+			health: 75,
+			//Metodos ---------------------
+			feed: function() {
+				this.health += 5;
+			},
+			attack: function() {
+				if (this.health <= 0)
+					return this.name + "is dead";
+				else
+					this.health -= 20;
+			}
+		};
+		outp.innerHTML = "<li> Pokemon: "+ pokemon.name + "</li>";
+		outp.innerHTML += "<li> Salud: "+ pokemon.health + "</li>";
+		pokemon.feed();
+		outp.innerHTML += "<li> Alimento: "+ pokemon.health + "</li>";
+		pokemon.attack();
+		pokemon.attack();
+		pokemon.attack();
+		outp.innerHTML += "<li> Ataque: "+ pokemon.health + "</li>";
+		outp.innerHTML += "<li> " + pokemon.attack() + "</li>";
+
+	</script>
+</body>
+</html>

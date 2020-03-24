@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crecer Flex Box</title>
+	<style>
+		body {
+			font:16px Arial;
+			color:#666;
+		}
+		h3 {
+			border:2px solid #de908e;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		ul.fruits {
+			background-color:#de908e;
+			border-radius: 4px;
+			display: flex; /*Activar FlexBox*/
+			flex-wrap: wrap;
+			height: 768px;
+			list-style: none;
+			padding: 0px;
+			margin:20px 0px;
+
+		}
+		ul.fruits li {
+			background-color:#c9e1d3;
+			margin:4px;
+		}
+		/*Crecer */
+		ul.fruits.options1 li:nth-of-type(1) {flex-grow: 2;}
+	    ul.fruits.options1 li:nth-of-type(3) {flex-grow: 3;}
+	</style>
+</head>
+<body>
+	<h1>CrecerFlex Box</h1>
+	<h3>flex-grow: n</h3>
+	<ul class="fruits options1">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+</body>
+</html>

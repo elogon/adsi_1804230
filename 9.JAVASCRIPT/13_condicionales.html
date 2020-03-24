@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicionales (SI)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		h3 {
+			font-size: 5em;
+			text-align: center;
+			margin: 0px;
+		}
+		input, button {
+			display: block;
+			margin: 10px auto;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Condicionales (SI)</h1>
+		<h3>X = 5^2</h3>
+		<input type="number" id="ans" placeholder="Valor de X">
+		<button id="btnValidate">Validar Respuesta</button>
+	</main>
+
+	<script>
+		// Variables 
+		var btn = document.getElementById('btnValidate');
+
+		btn.onclick = function() {
+			var ans = document.getElementById('ans').value;
+			// Condicional SI
+			if(parseInt(ans) == 25){
+				alert("Respuesta Correcta :) ");
+			}else { 
+				alert("Respuesta Incorrecta :( ");
+			}
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Envolver Flex Box</title>
+	<style>
+		body {
+			font:16px Arial;
+			color:#666;
+		}
+		h3 {
+			border:2px solid #de908e;
+			border-radius: 10px;
+			padding: 10px;
+		}
+		ul.fruits {
+			background-color:#de908e;
+			border-radius: 4px;
+			display: flex; /*Activar FlexBox*/
+			height: 768px;
+			list-style: none;
+			padding: 0px;
+			margin:20px 0px;
+
+		}
+		ul.fruits li {
+			background-color:#c9e1d3;
+			margin:4px;
+		}
+		/*Envolver*/
+		ul.fruits.options1 {flex-wrap:nowrap;}
+		ul.fruits.options2 {flex-wrap: wrap;}
+		ul.fruits.options3 {flex-wrap: wrap-reverse;}
+	</style>
+</head>
+<body>
+	<h1>Envolver Flex Box</h1>
+	<h3>Flex-wrap:nowrap</h3>
+	<ul class="fruits options1">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<!-- -->
+	<h3>Flex-wrap: wrap</h3>
+	<ul class="fruits options2">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+
+	<!-- --> 
+	<h3>Flex-wrap: wrap-reverse</h3>
+	<ul class="fruits options3">
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+		<li><img src="imgs/grapes.svg"></li>
+		<li><img src="imgs/pear.svg"></li>
+		<li><img src="imgs/orange.svg"></li>
+	</ul>
+</body>
+</html>

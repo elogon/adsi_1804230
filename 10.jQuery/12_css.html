@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulación CSS</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		:root {
+			--color1: #fff;
+			--color2: #4f5c6e;
+			--color3: #d9edff;
+		}
+		section.tictactoe {
+			height: 450px;
+			margin: 40px auto;
+			width: 456px;
+		}
+		section.tictactoe div.row {
+			border: 2px solid var(--color2);
+			display: inline-block;
+			height: 150px;
+			margin: -5px 0px 0px -5px;
+			transition: all 0.2s ease-in;
+			width: 150px;
+		}
+		section.tictactoe div.row:nth-child(1) {
+			border-color: var(--color1) var(--color2) var(--color2) var(--color1);
+		}
+		section.tictactoe div.row:nth-child(2) {
+			border-color: var(--color1) var(--color2) var(--color2) var(--color2);
+		}
+		section.tictactoe div.row:nth-child(3) {
+			border-color: var(--color1) var(--color1) var(--color2) var(--color2);
+		}
+		section.tictactoe div.row:nth-child(4) {
+			border-color: var(--color2) var(--color2) var(--color2) var(--color1);
+		}
+		section.tictactoe div.row:nth-child(6) {
+			border-color: var(--color2) var(--color1) var(--color2) var(--color2);
+		}
+		section.tictactoe div.row:nth-child(7) {
+			border-color: var(--color2) var(--color2) var(--color1) var(--color1);
+		}
+		section.tictactoe div.row:nth-child(8) {
+			border-color: var(--color2) var(--color2) var(--color1) var(--color2);
+		}
+		section.tictactoe div.row:nth-child(9) {
+			border-color: var(--color2) var(--color1) var(--color1) var(--color2);
+		}
+		section.tictactoe div.row:hover {
+			background-color: var(--color3);
+			cursor: pointer;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+		section.tictactoe div.row.cross {
+			background: url(imgs/tictactoe/cross.png) no-repeat center;
+		}
+		section.tictactoe div.row.circle {
+			background: url(imgs/tictactoe/circle.png) no-repeat center;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+		section.tictactoe.turn-cross div.row {
+			cursor: url(imgs/tictactoe/cross-cur.png), pointer;
+		}
+		section.tictactoe.turn-circle div.row {
+			cursor: url(imgs/tictactoe/circle-cur.png), pointer;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+		button.btn-reset {
+			background-color: var(--color2);
+			border: none;
+			color: var(--color1);
+			display: block;
+			font-size: 1.2em;
+			margin: 10px auto;
+			padding: 10px;
+			opacity: 0.8;
+			transition: all 0.5s ease-in;
+			width: 200px;
+		}
+		button.btn-reset:hover {
+			cursor: pointer;
+			opacity: 1;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+		section.tictactoe div.row.markwin {
+			background-color: #9eeb94;
+		}
+		section.tictactoe div.row.markdraw {
+			background-color: #f48b89;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Manipulación CSS</h1>
+		<section class="tictactoe turn-cross">
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+			<div class="row"></div>
+		</section>
+		<button class="btn-reset"> Reiniciar </button>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Eventos
+			$('body').on('click', 'div.row:not(.mark)', function(event) {
+				event.preventDefault();
+				if( $('section.tictactoe').hasClass('turn-cross') ) {
+					$(this).addClass('cross');
+					$('section.tictactoe').removeClass('turn-cross')
+										  .addClass('turn-circle');
+				} else {
+					$(this).addClass('circle');
+					$('section.tictactoe').removeClass('turn-circle')
+										  .addClass('turn-cross');
+				}
+				$(this).addClass('mark');
+				if(!checkWinner()) {
+					checkDraw();
+				}
+			});
+
+			$('.btn-reset').click(function(event) {
+				$('div.row').removeClass('mark')
+							.removeClass('markwin')
+							.removeClass('markdraw')
+				            .removeClass('cross')
+				            .removeClass('circle');
+				$('section.tictactoe').removeClass('turn-circle')
+									  .addClass('turn-cross');
+				$('h4').remove();
+			});
+
+			// Funciones
+			function checkWinner() {
+				// Horizontales
+				if($('div.row').eq(0).hasClass('cross') && 
+				   $('div.row').eq(1).hasClass('cross') &&
+				   $('div.row').eq(2).hasClass('cross')) {
+						markWinners(0,1,2,'X');
+						return true;
+				}
+				if($('div.row').eq(3).hasClass('cross') && 
+				   $('div.row').eq(4).hasClass('cross') &&
+				   $('div.row').eq(5).hasClass('cross')) {
+						markWinners(3,4,5,'X');
+						return true;
+				}
+				if($('div.row').eq(6).hasClass('cross') && 
+				   $('div.row').eq(7).hasClass('cross') &&
+				   $('div.row').eq(8).hasClass('cross')) {
+						markWinners(6,7,8,'X');
+						return true;
+				}
+				if($('div.row').eq(0).hasClass('circle') && 
+				   $('div.row').eq(1).hasClass('circle') &&
+				   $('div.row').eq(2).hasClass('circle')) {
+						markWinners(0,1,2,'O');
+						return true;
+				}
+				if($('div.row').eq(3).hasClass('circle') && 
+				   $('div.row').eq(4).hasClass('circle') &&
+				   $('div.row').eq(5).hasClass('circle')) {
+						markWinners(3,4,5,'O');
+						return true;
+				}
+				if($('div.row').eq(6).hasClass('circle') && 
+				   $('div.row').eq(7).hasClass('circle') &&
+				   $('div.row').eq(8).hasClass('circle')) {
+						markWinners(6,7,8,'O');
+						return true;
+				}
+				// Verticales
+				if($('div.row').eq(0).hasClass('cross') && 
+				   $('div.row').eq(3).hasClass('cross') &&
+				   $('div.row').eq(6).hasClass('cross')) {
+						markWinners(0,3,6,'X');
+						return true;
+				}
+				if($('div.row').eq(1).hasClass('cross') && 
+				   $('div.row').eq(4).hasClass('cross') &&
+				   $('div.row').eq(7).hasClass('cross')) {
+						markWinners(1,4,7,'X');
+						return true;
+				}
+				if($('div.row').eq(2).hasClass('cross') && 
+				   $('div.row').eq(5).hasClass('cross') &&
+				   $('div.row').eq(8).hasClass('cross')) {
+						markWinners(2,5,8,'X');
+						return true;
+				}
+				if($('div.row').eq(0).hasClass('circle') && 
+				   $('div.row').eq(3).hasClass('circle') &&
+				   $('div.row').eq(6).hasClass('circle')) {
+						markWinners(0,3,6,'O');
+						return true;
+				}
+				if($('div.row').eq(1).hasClass('circle') && 
+				   $('div.row').eq(4).hasClass('circle') &&
+				   $('div.row').eq(7).hasClass('circle')) {
+						markWinners(1,4,7,'O');
+						return true;
+				}
+				if($('div.row').eq(2).hasClass('circle') && 
+				   $('div.row').eq(5).hasClass('circle') &&
+				   $('div.row').eq(8).hasClass('circle')) {
+						markWinners(2,5,8,'O');
+						return true;
+				}
+				// Diagonales
+				if($('div.row').eq(0).hasClass('cross') && 
+				   $('div.row').eq(4).hasClass('cross') &&
+				   $('div.row').eq(8).hasClass('cross')) {
+						markWinners(0,4,8,'X');
+						return true;
+				}
+				if($('div.row').eq(2).hasClass('cross') && 
+				   $('div.row').eq(4).hasClass('cross') &&
+				   $('div.row').eq(6).hasClass('cross')) {
+						markWinners(2,4,6,'X');
+						return true;
+				}
+				if($('div.row').eq(0).hasClass('circle') && 
+				   $('div.row').eq(4).hasClass('circle') &&
+				   $('div.row').eq(8).hasClass('circle')) {
+						markWinners(0,4,8,'O');
+						return true;
+				}
+				if($('div.row').eq(2).hasClass('circle') && 
+				   $('div.row').eq(4).hasClass('circle') &&
+				   $('div.row').eq(6).hasClass('circle')) {
+						markWinners(2,4,6,'O');
+						return true;
+				}
+				return false;
+			}
+
+			function markWinners(i1,i2,i3,mk) {
+				$('div.row').eq(i1).addClass('markwin');
+				$('div.row').eq(i2).addClass('markwin');
+				$('div.row').eq(i3).addClass('markwin');
+				$('h1').after('<h4>GANARON LAS: '+mk+'</h4>');
+				$('div.row').addClass('mark');
+			}
+
+			function checkDraw(){
+				if($('div.row.mark').length == 9) {
+					$('h1').after('<h4>EMPATE</h4>');
+					$('div.row').addClass('markdraw');
+				}
+			}
+
+		});
+	</script>
+</body>
+</html>

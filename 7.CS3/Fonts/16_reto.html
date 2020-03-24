@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Reto(Media Queries)</title>
+	<style>
+		body {
+			font:16px Arial;
+		}
+		main {
+			border:2px solid red;
+			height: 1000px;
+			margin:0px auto;
+			width:1225px;
+		}
+		header div.logo {
+			background: url no-repeat center;
+			background-size: contain;
+			height: 200px;
+			margin:20px;
+		}
+		section.boxes div {
+			border:2px solid blue;
+			display: inline-block;
+			height: 260px;
+			margin-right:25px;
+			position: relative;
+			width: 260px;
+		}
+		section.boxes div:first-child {
+			margin-left: 25px;
+		}
+		section.boxes div:last-child {
+			margin-left: 20px;
+		}
+		section.boxes div:nth-child(1n){
+			background:url(imgs/rebooktenis.webp);
+			background-size: cover;
+		}
+		section.boxes div:nth-child(2n){
+			background:url(imgs/ReebokDelta.jpg);
+			background-size: cover;
+		}
+		section.boxes div:hover {
+
+		}
+		section.boxes div p {
+			background-color: rgba(0,0,0,.6);
+			color:rgba(255,255,255,.8);
+			bottom:0px;
+			margin:0px;
+			padding: 20px;
+			position: absolute;
+			width: 220px;
+
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<section class="boxes">
+		<div class="box1">
+			<p>Texto</p>
+		</div>
+		<div class="box2">
+			<p>Texto</p>
+		</div>
+		<div class="box3">
+			<p>Texto</p>
+		</div>
+		<div class="box4">
+			<p>Texto</p>
+		</div>
+		</section>
+		<footer>
+			<article class="art1">
+				<figure></figure>
+				<h2></h2>
+				<p></p>
+			</article>
+			<article class="art2">
+				<figure></figure>
+				<h2></h2>
+				<p></p>
+			</article>
+		</footer>
+	</main>
+</body>
+</html>

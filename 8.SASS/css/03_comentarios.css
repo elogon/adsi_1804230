@@ -1,0 +1,12 @@
+body {
+  font-family: Arial;
+  padding: 50px;
+  /* Comentario de CSS */
+}
+body h1 {
+  text-align: center;
+  font-size: 4em;
+}
+body p {
+  text-align: justify;
+}

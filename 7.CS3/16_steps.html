@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animacion (steps)</title>
+	<style>
+		section.mecha {
+			background:url(Imgs/mecha_steps.png) no-repeat left center;
+			height:382px;
+			margin:100px auto;
+			position: relative;
+			width: 320px;
+			/**---------**/
+			animation:animMecha 2.4s steps(20) infinite;
+		}
+		@keyframes animMecha {
+			100% {
+				background-position: -6400px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Animacion (steps)</h1>
+	<section class="mecha"></section>
+</body>
+</html>

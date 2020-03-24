@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Operadores (logicos)</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="CSS/table.css">
+</head>
+<body>
+	<main>
+		<h1>Operadores (logicos)</h1>
+		<table>
+			<thead>
+				<tr>
+					<td colspan="4">
+						<input id="vx" type="number" placeholder="valor de x">
+						<input id="vy" type="number" placeholder="valor de y">
+					</td>
+				</tr>
+				<tr>
+					<th>Operador</th>
+					<th>Descripcion</th>
+					<th>Ejemplo</th>
+					<th>Resultado</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>&&</td>
+					<td>Y</td>
+					<td>(x<10 && y<1)</td>
+					<td id="vb1"></td>
+				</tr>
+				<tr>
+					<td>||</td>
+					<td>O</td>
+					<td>(x==5 || y==5)</td>
+					<td id="vb2"></td>
+				</tr>
+				<tr>
+					<td>!=</td>
+					<td>No es igual</td>
+					<td>x ==5</td>
+					<td id="vb3"></td>
+				</tr>
+				
+		</table>
+	</main>
+	<script>
+		//variables
+		var vx = documentElementById('vx');
+		var vy = documentElementById('vy');
+
+		var vb1 = documentElementById('vb1');
+		var vb2 = documentElementById('vb2');
+		var vb3 = documentElementById('vb3');
+
+		function calcValues(x,y){
+			x = parseInt(x);
+			y = parseInt(y);
+			//---------------------------
+			vb1.innerHTML = (x<10 && y<1);
+			//---------------------------
+			vb2.innerHTML = (x==5 || y==5);
+			//----------------------------
+			vb3.innerHTML = !(x==y);
+		}
+		// Evento
+
+		vx.onkeyup = function(){
+			valx = vy.value;
+			valy = this.value;
+			if(valx.length > O && valx.length < 12){
+				calcValues(valx, valy);
+			}
+
+		}
+		
+	</script>
+</body>
+</html>

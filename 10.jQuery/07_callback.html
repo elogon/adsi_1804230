@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Callback (jQuery)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		section.starway {
+			position: relative;
+		}
+		div.starship {
+			background: transparent url(imgs/starship.png) no-repeat center;
+			background-size: contain;
+			height: 80px;
+			position: relative;
+			width: 200px;
+			/* */
+			animation: 0.3s animStarShip1 ease-in infinite,
+					   0.2s animStarShip2 ease-out infinite,
+					   0.1s animStarShip3 ease-in-out infinite;
+		}
+		@keyframes animStarShip1 {
+			0%, 100% { left: 0px; }
+			50%      { left: 4px; }
+		}
+		@keyframes animStarShip2 {
+			0%, 100% { top: 0px; }
+			50%      { top: 2px; }
+		}
+		@keyframes animStarShip3 {
+			0%, 100% { transform: skew(0deg); }
+			50%      { transform: skew(2deg); }
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Callback (jQuery)</h1>
+		<section class="starway">
+			<div class="starship"></div>
+		</section>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Callbacks
+			$('.starway').animate({
+				left: '400px'},
+				1000, function() {
+				$('.starway').animate({
+					top: '100px'},
+					1000, function() {
+					$('.starway').animate({
+						left: '0px'},
+						1000, function() {
+						$('.starway').animate({
+							top: '0px'},
+							1000, function() {
+							$('.starway').append('<h4>La animación ha finalizado!</h4>');
+						});
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+main {
+	margin:20px auto;
+	width: 960px;
+	article {
+		border:1px solid red;
+		display: inline-block;
+		height: 400px;
+		margin:2px;
+		overflow: hidden;
+		width: calc(960px / 3.1);
+		figure {
+			background: url(../imgs/saitama.jpg) no-repeat center top;
+			background-size: 140%;
+			height: 400px;
+			margin:0px;
+			padding: 0px;
+			position:relative;
+			transition: all 0.5s ease-in-out;
+		div {
+			background-color: rgba(0,0,0,.6);
+			bottom:-200px;
+			padding: 20px 0px;
+			position: absolute;
+			transition: all 0.4s 0.2s ease-in;
+			text-align: center;
+			width: calc(960px / 3.1);
+		button {
+			border:1px solid #fff;
+			border-radius: 20px;
+			background-color: #000;
+			color:#ccc;
+			padding: 10px;
+			width: 120px;
+		}
+		}
+		
+		}
+		&:hover figure {
+			background-size: 96%;
+			cursor: pointer;
+		}
+		&:hover figure div {
+			bottom:0px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <h1>metodos numeros</h1>
+      <input type="number" name="" id="num" placeholder="numeros con decimales">
+      <br>
+      <br>
+      <button id="btnCalc">calcular</button>
+      <br><br>
+      <ul id="output"></ul>
+    </main>
+    <script>
+
+      var btn = document.getElementById('btnCalc');
+      var outp = document.getElementById('output');
+      btn.onclick=function(){
+        var num = document.getElementById('num').value;
+        if (num.length>0) {
+          var fnum = parseFloat(num);
+              outp.innerHTML="<li> cadena :'"+num.toString()+"'</li>"
+              outp.innerHTML+="<li> arreglo: "+fnum.toFixed(0)+" </li>"
+              outp.innerHTML+="<li> precision: "+fnum.toPrecision(3)+" </li>"
+              outp.innerHTML+="<li> entero: "+parseInt(fnum)+" </li>"
+              outp.innerHTML+="<li> flotante: "+fnum+" </li>"
+
+        }else {
+          alert(" debe ingresar numero con decimales")
+        }
+      }
+
+
+    </script>
+
+  </body>
+</html>

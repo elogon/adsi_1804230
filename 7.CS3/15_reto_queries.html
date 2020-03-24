@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Reto(Media Queries)</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<style>
+		* {
+			transition: all 0.5s;
+		}
+		body {
+	
+			background-color:rgba(211,211,211);
+		}
+		p {
+			font-family:'Quicksand', sans-serif
+		}
+		main {
+			border:2px solid grey;
+			height: 1300px;
+			margin:0px auto;
+			width:1225px;
+		}
+
+		header div.logo {
+			background: url(Imgs/slogan.nike.png) no-repeat center;
+			background-size: cover;
+			height: 180px;
+			margin:20px;
+			box-shadow: 0px 0px 40px #000 inset;
+		}
+		section.boxes div {
+			display: inline-block;
+			height: 260px;
+			margin-right:25px;
+			position: relative;
+			width: 260px;
+			transition: all 1s;
+			transform: scale(0.9);
+			margin:20px;
+		}
+		section.boxes div:first-child {
+			margin-left: 25px;
+		}
+		section.boxes div:last-child {
+			margin-left: 20px;
+		}
+		section.boxes div:nth-child(1){
+			background:url(Imgs/nike.001.jpg);
+			background-size: cover;
+		}
+		section.boxes div:nth-child(2){
+			background:url(Imgs/nike002.jpg);
+			background-size: cover;
+		}
+		section.boxes div:nth-child(3){
+			background:url(Imgs/nike003.jpg);
+			background-size: cover;
+		}
+		section.boxes div:nth-child(4){
+			background:url(Imgs/nike004.jpg);
+			background-size: cover;
+		}
+		section.boxes div:hover {
+			background-size: 150%;
+		}
+		section.boxes div p {
+			background-color: rgba(0,0,0,.6);
+			color:rgba(255,255,255,.8);
+			bottom:0px;
+			margin:0px;
+			padding: 20px;
+			position: absolute;
+			width: 220px;
+			text-align: center;
+		}
+		section.caja2 {
+			border: 2px solid grey;
+			width: 1155px;
+			height: 330px;
+			margin: 0px auto;
+			padding: 5px;
+			margin:20px;
+		}
+		.caja2 div.box5 {
+			background: url(Imgs/nike005.jpg) no-repeat;
+			background-size: 300px;
+			background-position: 15px 0px;
+			width: 30%;
+			height: 300px;
+			display: inline-block;
+			margin: 5px;
+			
+		}
+		div.texto {
+			vertical-align: top;
+			width: 65%;
+			height: 300px;
+			display: inline-block;
+			margin-top: 5px;
+			margin-left: 10px;
+			text-align: justify;
+		}
+		section.caja3 {
+			border: 2px solid grey;
+			width: 1155px;
+			height: 330px;
+			margin: 0px auto;
+			padding: 5px;
+			margin:20px;
+		}
+		.caja3 div.box6 {
+			background:url(Imgs/nike007.jpg) no-repeat center;
+			background-size: 300px;
+			background-position: 15px 0px;
+			width: 30%;
+			height: 300px;
+			display: inline-block;
+			margin: 5px;
+			margin-left: 15px;
+		}
+		@media (max-width: 1024px){
+			main {
+				width: 640px;
+				height: 100%;
+			}
+			main section.boxes div {
+				width: 275px;
+			}
+			main section.caja2 {
+				height: 450px;
+				width: 90%;
+				display: inline-block;
+			}
+			main section.caja2 div p {
+				width: 300px;
+				margin: 0px auto;
+			}
+			main section.caja2 div.box5 {
+				background: url(Imgs/nike005.jpg) no-repeat center;
+				width: 170px;
+				height: 400px;
+				margin:0px 0px 0px 10px;
+			}
+
+			main section.caja3 {
+				height: 470px;
+				width: 90%;
+				display: inline-block;
+			}
+			main section.caja3 div p {
+				width: 300px;
+				margin: 0px auto;
+			}
+			main section.caja3 div.box6 {
+				background: url(Imgs/nike007.jpg) no-repeat center;
+				width: 170px;
+				height: 400px;
+				margin:0px 0px 0px 10px;
+			}
+			/**-------------------**/
+			@media (max-width: 720px) {
+				main {
+				width: 400px;
+				height: 3130px;
+			}
+			main section.boxes div {
+				width: 350px;
+			}
+			main section.caja2 {
+				height: 700px;
+				width: 90%;
+				display: inline-block;
+				margin:0px 0px 0px 10px;
+			}
+			main section.caja2 div p {
+				width: 290px;
+				
+			}
+			main section.caja2 div.box5 {
+				background: url(Imgs/nike005.jpg) no-repeat center;
+				position: relative;
+				height: 300px;
+				width: 300px;
+				margin: 0px 10px 0px 10px;
+				
+			}
+
+			main section.caja3 {
+				height: 850px;
+				width: 90%;
+				display: inline-block;
+				margin:0px 10px 0px 10px;
+			}
+			main section.caja3 div p {
+				width: 290px;
+				
+			}
+			main section.caja3 div.box6 {
+				background: url(Imgs/nike007.jpg) no-repeat center;
+				width: 300px;
+				height: 300px;
+				
+			}
+	</style>
+	
+</head>
+<body>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<section class="boxes">
+			<div class="box1">
+				<p>Nike Basketball</p>
+			</div>
+			<div class="box2">
+				<p>Nike Cellshop</p>
+			</div>
+			<div class="box3">
+				<p>Nike Decathlon</p>
+			</div>
+			<div class="box4">
+				<p>Nike Air 270</p>
+			</div>
+		</section>
+		<section class="caja2">
+			<div class="box5"></div>
+			<div class="texto">
+				<h1>HISTORIA NIKE</h1>
+				<p>Los orígenes de Nike se remontan a la década de los 50’s, cuando el entrenador de atletismo de la Universidad de Oregon, Bill Bowerman, buscaba afanosamente darle a sus atletas ventajas competitivas. Probó con diferentes superficies de pista, bebidas hidratantes y lo más importante, innovar en el calzado. Dada la poca importancia que las marcas de calzado de aquel entonces daban a las sugerencias hechas por Bill, él mismo sería el encargado de llevar a cabo las modificaciones en los zapatos para sus atletas</p>
+			</div>
+		</section>
+		<section class="caja3">
+			<div class="box6"></div>
+			<div class="texto">
+				<h1>EL NOMBRE NIKE Y SU FAMOSO NOMBRE</h1>
+				<p>El nombre de la marca proviene de la mitología griega: Nike es la diosa alada de la victoria. En 1971 nace el popular logo creado por Carolyn Davidson, una estudiante de diseño gráfico de la Universidad de Portland, conocido como “The Swoosh”, el cual representa el ala de la diosa Nike.Hacia el año de 1972 la nueva línea de zapatos Nike haría su debut en las pruebas de atletismo de los Estados Unidos que se celebraron en Eugene, Oregon. Hubo un modelo que logró llamar la atención de los corredores. Se trataba de una zapatilla creada por Bowerman con una suela inspirada en una wafflera que mejoraba la tracción y lograba ser más ligera que otros zapatos tradicionales</p>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

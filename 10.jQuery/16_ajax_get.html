@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ajax (Metodo GET)</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<style>
+		select {
+			-webkit-apparence:none;
+			display: block;
+			margin: 20px auto;
+			width: 160px;
+			padding: 6px;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+		.loader{
+			background: url(img/loader.gif) no-repeat center;
+			height: 30px;
+			margin: 20px auto;
+			width: 50px;
+
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Ajax (Método GET)</h1>
+		<select class="brands">
+			<option value="">Seleccione Marca...</option>
+			<option value="1">SantaCruz</option>
+			<option value="2">Intense</option>
+			<option value="3">Yeti</option>
+		</select>
+		<select class="references"></select>
+		<div class="loader"></div>
+	</main>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(document).ready(function($) {
+			// Lógica
+			$('.references').hide();
+			$('.loader').hide();
+			// Eventos 
+			$('.brands').change(function(event) {
+				$brn = $(this).val();
+				$('.loader').show();
+				$('.references').hide();
+				// GET
+				$.get('php/references.php', { brn: $brn }, function(data) {
+					setTimeout(function(){
+						$('.loader').hide();
+						$('.references').fadeIn(1000).html(data);
+					},1000);
+					
+				});
+			});
+		});
+	</script>
+</body>
+</html>

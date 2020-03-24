@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Media Queries</title>
+	<style>
+		*{
+			transition: all 0.5s;
+		}
+		body {
+			background-color: #013571;
+			font:16px tahoma;
+		}
+		section.main {
+			border:10px solid #0177db;
+			color:rgba(255,255,255,.6);
+			margin: 20px auto;
+			padding: 14px;
+			width: 960px;
+		}
+		section.main div.logo {
+			background: url(Imgs/pepsi01.png) no-repeat center;
+			background-size: contain;
+			margin: 0px auto;
+			height: 300px;
+			width: 780px;
+		}
+		section.main h1 span.r2,
+		section.main h1 span.r3 {
+			display:none;
+		}
+		@media (max-width: 1024px) {
+			section.main {
+				width: 640px;
+			}
+			section.main h1 span.r1,
+			section.main h1 span.r3 {
+				display:none;
+			}
+			section.main h1 span.r2 {
+				display:none;
+			}
+			section.main div.logo {
+				background: url(Imgs/pepsi02.png) no-repeat center;
+				height: 340px;
+				width: 340px;
+			}
+			
+		}
+		@media (max-width: 720px) {
+			section.main {
+				width: 440px;
+			}
+			section.main h1 span.r1,
+			section.main h1 span.r2 {
+				display:none;
+			}
+			section.main h1 span.r3 {
+				display:inline;
+			}
+			section.main div.logo {
+				background: url(Imgs/pepsi03.png) no-repeat center;
+				height: 340px;
+				width: 340px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="main">
+		<div class="logo"></div>
+		<h1>
+			Media Queries
+			<span class="r1">( 1024p )x</span>
+			<span class="r2">( 720px )</span>
+			<span class="r3">( 440px )</span>
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia illum delectus minima dolore ea nam quasi voluptatibus inventore quod est, adipisci asperiores obcaecati, placeat officia commodi hic alias, officiis eum. Maxime eos voluptas praesentium eum, hic quae illo aperiam eius, esse facere aut quo blanditiis ducimus fugit vel iusto officia rerum repellendus architecto aliquam quasi doloremque! Magni doloremque accusamus fugiat cumque. Deleniti, amet neque. Nemo quas laudantium consequatur ducimus perferendis tenetur id. Earum architecto ad illum commodi iusto fuga rem natus iste, accusantium expedita recusandae voluptates, illo excepturi soluta saepe odit velit perferendis necessitatibus. Iusto maiores veritatis, odio. Illum ducimus tenetur, voluptatum delectus error veniam dolore ipsam molestias eos consectetur recusandae. Dicta nisi rem voluptate repellat itaque, quidem, optio, quod provident sequi a, quaerat vitae. Nulla natus architecto tenetur tempore, ducimus dolores minima facilis explicabo voluptatum, optio autem aliquam recusandae voluptas at in quam magnam expedita, nemo eum sit consectetur, non temporibus! Officia iste mollitia harum accusamus, consectetur laboriosam ea sapiente culpa veritatis rem, saepe perferendis repellat. Obcaecati ea atque dolor libero est possimus, tempora at non dolores quisquam, natus temporibus, dignissimos distinctio perspiciatis harum? Fuga voluptas delectus adipisci ratione nostrum. Velit minus magnam vitae sit sapiente obcaecati voluptas est.
+		</p>
+	</section>
+</body>
+</html>

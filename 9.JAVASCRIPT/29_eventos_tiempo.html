@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos (Tiempo)</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<main>
+		<h1>Eventos (Tiempo)</h1>
+		<h4>setInterval:</h4>
+		<input type="number" id="ctime" placeholder="Tiempo en segundos">
+		<button id="btnCountDown"> Temporizador </button>
+		<output id="ptime"></output>
+		<!-- -->
+		<h4>setTimeout:</h4>
+		<input type="number" id="rtime" placeholder="Tiempo en segundos">
+		<button id="btnRefresh"> Refrescar Página </button>
+	</main>
+	<script>
+		// Variables
+		var btnCountDown = document.getElementById('btnCountDown');
+		var ptime        = document.getElementById('ptime');
+
+		// Eventos
+		btnCountDown.onclick = function() {
+			var ctime = document.getElementById('ctime').value;
+			if(ctime.length > 0) {
+				ctime = parseInt(ctime);
+				//setInterval
+				var si = setInterval(function() {
+					if(ctime == 0) {
+						ptime.innerHTML = ctime;
+						clearInterval(si);
+					}else {
+						ptime.innerHTML = ctime;
+					}
+					ctime--;
+				},1000);
+			}else {
+				alert('Debe ingresar un valor en segundos...');
+			}
+		}
+
+		btnRefresh.onclick = function() {
+			var rtime = document.getElementById('rtime').value;
+			if(rtime.length > 0) {
+				rtime = parseInt(rtime)*1000;
+				//setTimeout
+				setTimeout(function() {
+					alert('La página se refrescara!');
+					window.location.replace('29_eventos_tiempo.html');
+					//window.location.href = "29_eventos_tiempo.html";
+				},rtime)
+			}else {
+				alert('Debe ingresar el tiempo en segundos...')
+			}
+		}
+	</script>
+</body>
+</html>

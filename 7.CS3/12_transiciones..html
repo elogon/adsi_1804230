@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transiciones</title>
+	<style>
+		section.transiciones {
+			margin: 100px auto;
+			width: 620px;
+		}
+		section.transiciones div {
+			background: url(imgs/mewtwo.jpg) no-repeat center;
+			background-size: cover;
+			display: inline-block;
+			height: 220px;
+			margin: 20px;
+			transition: all 1s ease-in;
+			width: 160px;
+		}
+		section.transiciones div:hover{
+			cursor:pointer;
+		}
+		section.transiciones div.tran1:hover {
+			transform: scale(0.5);
+		}
+		section.transiciones div.tran2:hover {
+			transform: translateY(100px);
+		}
+		section.transiciones div.tran3 {
+			background-image: none;
+			background-color: crimson;
+			transition: background-color 2s, transform 1s 2s;
+		}
+		section.transiciones div.tran3:hover {
+			background-color: darkgreen;
+			transform: rotate(360deg) scale(1.2);
+	</style>
+</head>
+<body>
+	<h1>Transiciones</h1>
+	<section class="transiciones">
+		<div class="tran1"></div>
+		<div class="tran2"></div>
+		<div class="tran3"></div>
+	</section>
+</body>
+</html>

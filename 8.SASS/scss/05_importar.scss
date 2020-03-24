@@ -1,0 +1,24 @@
+@import "filtros"; 
+
+body {
+	font:16px Arial;
+}
+section {
+	margin: 20px auto;
+	width: (224px * 3.1);
+	h1 {
+		text-align: center;
+	}
+	figure {
+		background: #fff url(../imgs/saitama1.gif) no-repeat center;
+		background-size: contain;
+		border: 2px solid #aaa;
+		border-radius:100px;
+		display: inline-block;
+		height: 200px;
+		margin:10px;
+		padding: 0px;
+		width: 200px;
+
+	}
+}
