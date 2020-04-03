@@ -22,3 +22,6 @@ Route::get('usuarios', function () {
 });
 //Resources
 Route::resource('users', 'UserController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
